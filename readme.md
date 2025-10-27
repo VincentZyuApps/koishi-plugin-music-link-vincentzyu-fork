@@ -1,4 +1,4 @@
-# koishi-plugin-music-link
+# koishi-plugin-music-link-vincentzyu-fork
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-music-link?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link)
 
@@ -8,6 +8,25 @@
 ## fork此插件时候 上游仓库版本号:
 > 1.7.30
 
+## 效果预览
+
+![preview.png](preview.png)
+![preview2.png](preview2.png)
+
+## fork版本的更新日志
+
+- **1.7.31-vincentzyu.v4+20250923**
+  - 到目前为止，fork以后的所有改动:
+    - 只保留command6和8，其他全删了，因为貌似apiG了((
+    - 提供两种渲染图片样式
+
+- **1.7.31-vincentzyu.v6+20251027**
+  - 支持发送onebot音乐卡片
+  - 新增api，支持qq音乐、网易云 以及 二者聚合
+
+-----
+# 以下是原始仓库的readme
+# koishi-plugin-music-link
 
 🎵 **音乐下载** - 搜索并提供QQ音乐和网易云音乐平台的歌曲下载链接，🤩付费的也可以欸！？
 
@@ -35,20 +54,6 @@
 <p>安装并配置插件后，使用下述命令搜索和下载音乐：</p>
 <hr>
 
-<h3>使用星之阁API搜索QQ、网易云音乐</h3>
-<pre><code>下载音乐 [keywords]</code></pre>
-<p><b>(不推荐)</b> 星之阁API，需要加群申请API Key，且API Key可能存在失效风险。支持QQ音乐和网易云音乐，速度较慢，稳定性一般。</p>
-<hr>
-
-<h3>使用星之阁-酷狗API搜索酷狗音乐</h3>
-<pre><code>酷狗音乐 [keywords]</code></pre>
-<p><b>(不推荐)</b> 星之阁-酷狗API，需要加群申请API Key，且API Key可能存在失效风险。仅支持酷狗音乐，速度较慢，稳定性一般。</p>
-<hr>
-
-<h3>使用music.gdstudio.xyz网站搜索各大音乐平台</h3>
-<pre><code>歌曲搜索 [keywords]</code></pre>
-<p><b>(比较推荐)</b> music.gdstudio.xyz 网站，无需API Key，但需要 <b>puppeteer</b> 服务支持进行网页爬取，速度还行。默认使用网易云音乐搜索，支持多平台选择。</p>
-<hr>
 
 <h3>使用api.injahow.cn网站搜索网易云音乐</h3>
 <pre><code>网易点歌 [歌曲名称/歌曲ID]</code></pre>
@@ -138,14 +143,6 @@
 ---
 
 
-### fork版本的更新日志
-
-- **1.7.31-vincentzyu.v4+20250923**
-
-- **1.7.31-vincentzyu.v4+20250923**
-  - fork以后的所有改动:
-    - 只保留command6和8，其他全删了，因为貌似apiG了((
-    - 提供两种渲染图片样式
 
 ### 上游仓库的更新日志
 
