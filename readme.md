@@ -1,12 +1,15 @@
 # koishi-plugin-music-link-vincentzyu-fork
 
-[![npm](https://img.shields.io/npm/v/koishi-plugin-music-link?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link)
+[![npm](https://img.shields.io/npm/v/koishi-plugin-music-link-vincentzyu-fork?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
+[![npm-download](https://img.shields.io/npm/dm/koishi-plugin-music-link-vincentzyu-fork?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
+
 
 ## 原始仓库：
-> https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link 
+https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link 
+> (66原作者怎么删了)
 
 ## fork此插件时候 上游仓库版本号:
-> 1.7.30
+1.7.30
 
 ## 效果预览
 
@@ -18,7 +21,7 @@
 
 - **1.8.0-beta1-20251218**
   - 落月api新增自定义url
-  - 换一个版本号方式，之前的太奇怪了(())
+  - 换一个版本号方式，之前的太奇怪了((
 
 - **1.7.31-vincentzyu.v6+20251027**
   - 支持发送onebot音乐卡片
@@ -29,14 +32,17 @@
   - 支持自定义字体，在配置项中填入字体路径即可
   - 更新readme.md
 
-
 - **1.7.31-vincentzyu.v4+20250923**
   - 到目前为止，fork以后的所有改动:
     - 只保留command6和8，其他全删了，因为貌似apiG了((
     - 提供两种渲染图片样式
 
+- **前面的版本号**
+  - 忘了
+    - 反正你看到的features都是上游作者和我前面更新的(
+
 -----
-# 以下是原始仓库的readme
+# 以下是修改过的部分的原始仓库的readme
 # koishi-plugin-music-link
 
 🎵 **音乐下载** - 搜索并提供QQ音乐和网易云音乐平台的歌曲下载链接，🤩付费的也可以欸！？
@@ -53,35 +59,76 @@
 在koishi插件市场 搜索并安装`music-link-vincentzyu-fork`
 或者
 在koishi依赖管理 右上角加号 搜索`koishi-plugin-music-link-vincentzyu-fork`
+或者
+`cd到你koishi的根目录` 然后 `npm install koishi-plugin-music-link-vincentzyu-fork`
+或者
+`cd到你koishi的根目录` 然后 `yarn add koishi-plugin-music-link-vincentzyu-fork`
 
 ---
 
+## 📖 使用方法
 
-<hr>
+安装并配置插件后，使用下述命令搜索和下载音乐：
+> 指令名是可以改的，下面展示的`网易点歌`和`落月点歌`都是默认值捏
 
-<details>
-<summary><h3>使用方法 (点击展开)</h3></summary>
+### 🎵 网易点歌 (command6)
+```
+网易点歌 [歌曲名称/歌曲ID]
+```
 
-<p>安装并配置插件后，使用下述命令搜索和下载音乐：</p>
-<hr>
+**后端选择：**
+- **`api.injahow.cn`** (默认 - 稳定推荐)
+  - ✅ API请求快速且稳定，无需 puppeteer 服务
+  - ✅ 推荐QQ官方机器人使用
+  - ⚠️ VIP歌曲只能听45秒（黑胶限制）
+  - 🎯 **仅支持网易云音乐**
 
+- **`api.qijieya.cn`** (推荐 - 完整版)
+  - ✅ 稳定性未知，但支持全部可听
+  - ✅ 无VIP限制，完整歌曲
+  - 🎯 **仅支持网易云音乐**
 
-<h3>使用api.injahow.cn网站搜索网易云音乐</h3>
-<pre><code>网易点歌 [歌曲名称/歌曲ID]</code></pre>
-<p><b>(比较推荐)</b> api.injahow.cn 网站，API请求快速且稳定，无需 puppeteer 服务，推荐QQ官方机器人使用此后端，但是VIP歌曲只能听45秒。<b>仅支持网易云音乐</b>，可以通过歌曲名称或歌曲ID进行搜索。</p>
-<hr>
+- **`meting.jmstrand.cn`** (可选)
+  - ✅ 稳定性未知，全部可听
+  - 🎯 **仅支持网易云音乐**
 
-<h3>使用dev.iw233.cn网站搜索网易云音乐</h3>
-<pre><code>音乐搜索器 [keywords]</code></pre>
-<p><b>(推荐)</b> dev.iw233.cn 网站，无需API Key，但需要 <b>puppeteer</b> 服务支持进行网页爬取，速度较慢。支持网易云音乐搜索。</p>
-<hr>
+- **`metingapi.nanorocky.top`** (不推荐)
+  - ✅ 无损音质，全部可听
+  - ⚠️ 文件很大，下载慢
+  - 🎯 **仅支持网易云音乐**
 
-<h3>使用www.hhlqilongzhu.cn网站API搜索QQ + 网易云音乐</h3>
-<pre><code>龙珠搜索 [keywords]</code></pre>
-<p><b>(一般推荐)</b> www.hhlqilongzhu.cn 网站的点歌API，江苏的确可能访问性较差（江苏反诈）。支持网易云音乐平台搜索。</p>
-<hr>
+### 🎶 落月点歌 (command9)
+```
+落月点歌 [歌曲名称]
+```
 
-</details>
+**后端选择：**
+- **`api.vkeys.cn/v2`** (落月api官方)
+  - ✅ 支持**网易云 + QQ音乐**
+  - ✅ 支持多音质选择（64k - Master母带）
+  - ✅ 支持聚合搜索（双平台同时搜索）
+  - 🎯 **网易云最高支持：超清母带 (Master)**
+  - 🎯 **QQ音乐最高支持：臻品母带2.0**
+
+- **`http://xwl.vincentzyu233.cn:51217`** (作者自建)
+  - ✅ 与官方API功能相同
+  - ⚠️ 如果挂了可以去QQ群：259248174 叫我
+
+**落月api音质等级说明：**
+
+| 平台 | 音质选项 | 码率/格式 |
+|:---|:---|:---|
+| 网易云 | 标准 | 64k / 128k |
+| 网易云 | HQ极高 | 192k / 320k |
+| 网易云 | SQ无损 | FLAC |
+| 网易云 | Hi-Res | 高解析度无损 |
+| 网易云 | Spatial Audio | 高清臻音 |
+| 网易云 | Master | 超清母带 |
+| QQ音乐 | 标准/HQ | 标准/高音质 |
+| QQ音乐 | SQ无损 | 无损音质 |
+| QQ音乐 | Hi-Res | Hi-Res音质 |
+| QQ音乐 | 杜比全景声 | Dolby Atmos |
+| QQ音乐 | 臻品母带2.0 | Master 2.0 |
 
 ---
 
@@ -99,31 +146,10 @@
 <p>⚠️如果你选择了 <code>file</code> 类型，请确保平台支持！目前仅实测了 <code>onebot</code> 平台的部分协议端支持！</p>
 <hr>
 
-<h3>使用 <code>-n 1</code> 直接返回内容</h3>
-<p>在使用命令时，可以通过添加 <code>-n 1</code> 选项直接返回指定序号的歌曲内容。这对于快速获取特定歌曲非常有用。</p>
+<h3>使用 <code>-n 数字</code> 直接返回内容</h3>
+<p>在使用命令时，可以通过添加 <code>-n 数字</code> 选项直接返回指定序号的歌曲内容。这对于快速获取特定歌曲非常有用。</p>
 <p>例如，使用以下命令可以直接获取第一首歌曲的详细信息：</p>
 <pre><code>歌曲搜索 -n 1 蔚蓝档案</code></pre>
-
-
----
-
-## 重要提示⚠️
-
-### 目前 星之阁API的key已经失效，如需使用请自行前往注册
-
-### 目前 推荐使用<code>music.gdstudio.xyz</code>的服务，请确保<code>puppeteer</code>服务可用
-
----
-| 后端推荐度 |               名称                | 备注  |
-| :--------: | :-------------------------------: | :---: |
-|   **ⅰ**    | \`music.gdstudio.xyz\` (歌曲搜索) | 较高  |
-|   **ⅱ**    |   \`dev.iw233.cn\` (音乐搜索器)   | 中等  |
-|  *......*  |               其他                | 中等  |
-|   **ⅳ**    | \`星之阁API\` (下载音乐/酷狗音乐) | 较低  |
-
----
-
-目前基本QQ音乐都死翘翘了 （腾讯太小气了
 
 
 ---

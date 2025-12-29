@@ -3,3 +3,7 @@ assets/*
 
 # But keep the assets folder itself
 !assets/.gitkeep
+ 
+# Ignore temp folder in lib
+lib/temp/
+lib/temp/*
