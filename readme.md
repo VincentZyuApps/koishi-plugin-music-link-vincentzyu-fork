@@ -83,7 +83,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 **手动下载步骤：**
 1. 点击上述链接下载资源文件
 2. 将所有文件放入 `assets` 文件夹（`assets` 文件夹与 `lib` 文件夹、`package.json` 文件位于同级目录中）
-3. 重启 Koishi，插件将使用本地资源文件
+3. 重启本插件，让插件重新执行一遍`validateAssets()`
 
 ---
 
