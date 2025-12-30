@@ -8,6 +8,6 @@ npm login --registry https://registry.npmjs.org
 # 在浏览器里面登录npm，去邮件里面收验证码
 
 npm run pub music-link-vincentzyu-fork -- --registry https://registry.npmjs.org
-npm dist-tag add koishi-plugin-music-link-vincentzyu-fork@1.8.0-beta5-20251230 latest --registry https://registry.npmjs.org
+npm dist-tag add koishi-plugin-music-link-vincentzyu-fork@1.8.0-beta6-20251230 latest --registry https://registry.npmjs.org
 npm view koishi-plugin-music-link-vincentzyu-fork
 ```

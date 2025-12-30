@@ -57,13 +57,10 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## 安装
 
-在koishi插件市场 搜索并安装`music-link-vincentzyu-fork`
-或者
-在koishi依赖管理 右上角加号 搜索`koishi-plugin-music-link-vincentzyu-fork`
-或者
-`cd到你koishi的根目录` 然后 `npm install koishi-plugin-music-link-vincentzyu-fork`
-或者
-`cd到你koishi的根目录` 然后 `yarn add koishi-plugin-music-link-vincentzyu-fork`
+在koishi插件市场 搜索并安装`music-link-vincentzyu-fork`<br>
+或者 在koishi依赖管理 右上角加号 搜索`koishi-plugin-music-link-vincentzyu-fork`<br>
+或者 `cd到你koishi的根目录` 然后 `npm install koishi-plugin-music-link-vincentzyu-fork`<br>
+或者 `cd到你koishi的根目录` 然后 `yarn add koishi-plugin-music-link-vincentzyu-fork`<br>
 
 ### ⚠️ 重要：首次启动说明
 
