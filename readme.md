@@ -15,6 +15,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png)
 
 ## fork版本的更新日志
@@ -63,6 +64,26 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 `cd到你koishi的根目录` 然后 `npm install koishi-plugin-music-link-vincentzyu-fork`
 或者
 `cd到你koishi的根目录` 然后 `yarn add koishi-plugin-music-link-vincentzyu-fork`
+
+### ⚠️ 重要：首次启动说明
+
+插件首次启动时，会自动从 Gitee 下载所需的资源文件（字体和背景图片），**下载完成后才会注册指令和启动中间件**。
+
+如果网络不稳定或自动下载失败，可以手动下载资源文件：
+
+**资源文件下载链接：**
+- **字体文件：**
+  - [LXGWWenKaiMono-Regular.ttf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/fonts/LXGWWenKaiMono-Regular.ttf)
+  - [SourceHanSerifSC-Medium.otf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/fonts/SourceHanSerifSC-Medium.otf)
+
+- **背景图片：**
+  - [mahiro_mihari.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/bg/mahiro_mihari.png)
+  - [pixai_koishi.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/bg_koishi/pixai_koishi.png)
+
+**手动下载步骤：**
+1. 点击上述链接下载资源文件
+2. 将所有文件放入 `assets` 文件夹（`assets` 文件夹与 `lib` 文件夹、`package.json` 文件位于同级目录中）
+3. 重启 Koishi，插件将使用本地资源文件
 
 ---
 
