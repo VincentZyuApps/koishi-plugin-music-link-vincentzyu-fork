@@ -6,4 +6,6 @@ assets/*
  
 # Ignore temp folder in lib
 lib/temp/
-lib/temp/*
+lib/temp/*changes.diff
+
+changes.diff

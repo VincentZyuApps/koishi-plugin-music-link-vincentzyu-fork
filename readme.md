@@ -20,6 +20,13 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## fork版本的更新日志
 
+- **1.8.1-beta1-20260127**
+  - feat: 新增支持base64发文件，适用于使用napcat docker的用户，就不需要配置--volume参数挂在temp文件夹了(
+  - feat: 新增支持自定义文件名格式, 比如`${name}-${artist}-${time}.mp3`
+  - refractor: 把 上游神人作者 搞的2000多行的index.js拆成了多个js文件方便后续维护
+  - pref: 修改部分配置项默认值比如deleteTempTime是300s，防止音乐文件过大还没传完就删了
+  - chore: addCoverInImage这个选项其实我一直都没做，原先是自用插件。这个配置项是提醒自己未来可以添加的。后面朋友想要我发版，而我发版之前忘记把这个删了。所以本次更新把这个选项改成默认值false并且disable掉
+
 - **1.8.0-beta1-20251218**
   - 落月api新增自定义url
   - 换一个版本号方式，之前的太奇怪了((
