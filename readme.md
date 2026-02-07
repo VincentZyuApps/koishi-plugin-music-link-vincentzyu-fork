@@ -22,6 +22,14 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## fork版本的更新日志
 
+- **1.8.1-beta2-20260207**
+  - feat: 新增 `fileNameKeepSpaces` 配置项，支持保留文件名中的空格
+  - feat: 新增 `fileNameSlashReplacement` 配置项，支持自定义文件名中斜杠`/`的替换字符（如 `-`、`&`、`_` 等）
+  > 上面两项是神秘用户的要求，不过建议保持不变就好了捏，横杠`-`不是挺好的吗(
+  - fix: `deleteTempTime` 配置项现在description里面写明支持设置为 `0` 或负数，表示永不删除临时文件 *(之前就支持，只是原作者没在description里面写)*
+  - pref: `maxDuration` 默认值从 900 秒调整为 1800 秒
+  - chore: 移除部分配置项的 `.experimental()` 标记，这些功能已经稳定
+
 - **1.8.1-beta1-20260127**
   - feat: 新增支持base64发文件，适用于使用napcat docker的用户，就不需要配置--volume参数挂在temp文件夹了(
   - feat: 新增支持自定义文件名格式, 比如`${name}-${artist}-${time}.mp3`
