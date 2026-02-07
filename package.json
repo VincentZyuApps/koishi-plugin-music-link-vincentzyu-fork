@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-music-link-vincentzyu-fork",
   "description": "/*音乐下载*/music-link的fork版本。🎵搜索音乐资源🤩提供QQ、网易云平台的音乐下载，付费的也可以欸？[点我查看使用方法](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork)",
-  "version": "1.8.1-beta1-20260127",
+  "version": "1.8.1-beta2-20260207",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
