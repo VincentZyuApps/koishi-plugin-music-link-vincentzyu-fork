@@ -1,3 +1,5 @@
+![koishi-plugin-music-link-vincentzyu-fork](https://socialify.git.ci/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork/image?custom_description=music-link%E7%9A%84fork%E7%89%88%E6%9C%AC%E3%80%82%F0%9F%8E%B5%E6%90%9C%E7%B4%A2%E9%9F%B3%E4%B9%90%E8%B5%84%E6%BA%90%F0%9F%A4%A9%E6%8F%90%E4%BE%9BQQ%E3%80%81%E7%BD%91%E6%98%93%E4%BA%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BB%98%E8%B4%B9%E7%9A%84%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%AC%B8%EF%BC%9F%5B%E7%82%B9%E6%88%91%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fgitee.com%2Fvincent-zyu%2Fkoishi-plugin-music-link-vincentzyu-fork&description=1&font=Bitter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff3%2FKoishi.js_Logo.png&name=1&owner=1&stargazers=1&theme=Auto)
+
 # koishi-plugin-music-link-vincentzyu-fork
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-music-link-vincentzyu-fork?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
