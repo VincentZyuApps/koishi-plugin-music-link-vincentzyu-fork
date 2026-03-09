@@ -27,6 +27,19 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## fork版本的更新日志
 
+- **1.8.2-beta.1+20260310**
+  - fix: 修复 command6 ID 点歌模式中 `selectedSongId` 未定义的致命 bug（此 bug 导致 ID 点歌功能完全不可用）
+  - fix: 修复 `generateResponse()` 中无条件发送音乐卡片，导致 command9 调用时重复/误发的问题
+  - fix: 移除 `global._musicPlugin*` 全局变量污染，修复与 `reusable: true` 多实例声明的矛盾
+  - refactor: 提取 `buildSongUrl()` / `smartGet()` / `fetchNeteaseLyric()` / `safeJsonParse()` 等辅助函数，大幅减少重复代码
+  - refactor(render): 字体和图片文件改为模块级缓存，避免每次渲染重读大文件阻塞事件循环
+  - refactor(render): puppeteer page 加 `try/finally` 防止内存泄漏
+  - chore: homepage/bugs 迁移至 GitHub
+
+- **1.8.1-20260310**
+  - chore: 更新反馈群号为 1085190201（旧群 259248174 已失效）
+  - release: 正式发版 🎉
+
 - **1.8.1-beta2-20260207**
   - feat: 新增 `fileNameKeepSpaces` 配置项，支持保留文件名中的空格
   - feat: 新增 `fileNameSlashReplacement` 配置项，支持自定义文件名中斜杠`/`的替换字符（如 `-`、`&`、`_` 等）
