@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-music-link-vincentzyu-fork",
   "description": "/*音乐下载*/music-link的fork版本。🎵搜索音乐资源🤩提供QQ、网易云平台的音乐下载，付费的也可以欸？[点我查看使用方法](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork)",
-  "version": "1.8.2-beta.1+20260310",
+  "version": "1.9.0-alpha.1+20260324",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -25,7 +25,16 @@
   "bugs": {
     "url": "https://github.com/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork/issues"
   },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
   "peerDependencies": {
-    "koishi": "^4.15.0"
+    "koishi": "^4.15.0",
+    "puppeteer": "^21.0.0"
+  },
+  "peerDependenciesMeta": {
+    "puppeteer": {
+      "optional": true
+    }
   }
 }

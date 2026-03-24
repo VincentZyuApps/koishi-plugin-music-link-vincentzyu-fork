@@ -1,4 +1,4 @@
-![koishi-plugin-music-link-vincentzyu-fork](https://socialify.git.ci/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork/image?custom_description=music-link%E7%9A%84fork%E7%89%88%E6%9C%AC%E3%80%82%F0%9F%8E%B5%E6%90%9C%E7%B4%A2%E9%9F%B3%E4%B9%90%E8%B5%84%E6%BA%90%F0%9F%A4%A9%E6%8F%90%E4%BE%9BQQ%E3%80%81%E7%BD%91%E6%98%93%E4%BA%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BB%98%E8%B4%B9%E7%9A%84%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%AC%B8%EF%BC%9F%5B%E7%82%B9%E6%88%91%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fgitee.com%2Fvincent-zyu%2Fkoishi-plugin-music-link-vincentzyu-fork&description=1&font=Bitter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff3%2FKoishi.js_Logo.png&name=1&owner=1&stargazers=1&theme=Auto)
+![koishi-plugin-music-link-vincentzyu-fork](https://socialify.git.ci/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork/image?custom_description=music-link%E7%9A%84fork%E7%89%88%E6%9C%AC%E3%80%82%F0%9F%8E%B5%E6%90%9C%E7%B4%A2%E9%9F%B3%E4%B9%90%E8%B5%84%E6%BA%90%F0%9F%A4%A9%E6%8F%90%E4%BE%9BQQ%E3%80%81%E7%BD%91%E6%98%93%E4%BA%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BB%98%E8%B4%B9%E7%9A%84%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%AC%B8%EF%BC%9F%5B%E7%82%B9%E6%88%91%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fgitee.com%2Fvincent-zyu%2Fkoishi-plugin-music-link-vincentzyu-fork&description=1&font=Bitter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff3%2FKoishi.js_Logo.png&name=1&owner=1&pattern=Plus&stargazers=1&theme=Auto)
 
 # koishi-plugin-music-link-vincentzyu-fork
 
@@ -20,12 +20,43 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## 效果预览
 
+### 🎨 SVG 渲染模式 (v1.9.0+ 新增)
+
+> ✨ **resvg 渲染** - 比 Puppeteer 快 3 倍以上，资源占用极低！
+
+#### 亮色模式（默认）
+![SVG 亮色模式预览](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/svg-bright-preview.png)
+
+#### 暗黑模式
+![SVG 暗黑模式预览](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/svg-dark-preview.png)
+
+### 🖌️ Puppeteer 渲染模式（传统方式）
+
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png)
 
-## fork版本的更新日志
+## fork 版本的更新日志
+
+- **1.9.0-beta.1+20260324** 🎉
+  - ✨ **新增 resvg 轻量级 SVG 渲染功能！**
+    - 🚀 **比 Puppeteer 快 3 倍以上，资源占用降低 10 倍！**
+    - 📦 引入 `@resvg/resvg-js` 依赖，Puppeteer 改为可选依赖
+  - 🎨 **新增出图模式多选配置**
+    - 📊 `renderMode` 配置项支持多选：`svg` / `puppeteer` / `text`
+    - ✅ 默认只启用 SVG 模式，用户可根据需求自由组合
+  - 🌙 **SVG 暗黑模式支持**
+    - `enableSvgDarkMode` 配置项，默认亮色模式
+    - 可自定义主题色 `svgThemeColor`（默认 Koishi 紫 #7e57c2）
+    - 可调整渲染缩放比例 `svgScale`（默认 3.3x）
+  - 📝 **配置智能提示**
+    - 插件启动时自动显示当前出图模式配置
+    - Puppeteer 配置项在未启用时自动禁用
+  - 💡 **优化用户体验**
+    - SVG 出图显示更多歌曲信息（歌名、歌手、专辑、时长、音质标识）
+    - 无封面图片，专注于歌曲列表内容展示
+    - 适合手机小屏用户快速浏览
 
 - **1.8.2-beta.1+20260310**
   - fix: 修复 command6 ID 点歌模式中 `selectedSongId` 未定义的致命 bug（此 bug 导致 ID 点歌功能完全不可用）
