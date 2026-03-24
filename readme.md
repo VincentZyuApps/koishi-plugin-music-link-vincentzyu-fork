@@ -41,8 +41,8 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 - **1.9.0-beta.1+20260324** 🎉
   - ✨ **新增 resvg 轻量级 SVG 渲染功能！**
-    - 🚀 **比 Puppeteer 快 3 倍以上，资源占用降低 10 倍！**
-    - 📦 引入 `@resvg/resvg-js` 依赖，Puppeteer 改为可选依赖
+    - 🚀 **比 Puppeteer 资源占用低！**
+    - 📦 引入 `@resvg/resvg-js` 依赖，Puppeteer 依旧保持可选依赖
   - 🎨 **新增出图模式多选配置**
     - 📊 `renderMode` 配置项支持多选：`svg` / `puppeteer` / `text`
     - ✅ 默认只启用 SVG 模式，用户可根据需求自由组合
@@ -53,10 +53,6 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
   - 📝 **配置智能提示**
     - 插件启动时自动显示当前出图模式配置
     - Puppeteer 配置项在未启用时自动禁用
-  - 💡 **优化用户体验**
-    - SVG 出图显示更多歌曲信息（歌名、歌手、专辑、时长、音质标识）
-    - 无封面图片，专注于歌曲列表内容展示
-    - 适合手机小屏用户快速浏览
 
 - **1.8.2-beta.1+20260310**
   - fix: 修复 command6 ID 点歌模式中 `selectedSongId` 未定义的致命 bug（此 bug 导致 ID 点歌功能完全不可用）
