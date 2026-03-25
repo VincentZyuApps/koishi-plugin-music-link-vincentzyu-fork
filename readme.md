@@ -100,11 +100,11 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
   - refactor(render): puppeteer page 加 `try/finally` 防止内存泄漏
   - chore: homepage/bugs 迁移至 GitHub
 
-- **1.8.1-20260310**
+- **1.8.1+20260310**
   - chore: 更新反馈群号为 1085190201（旧群 259248174 已失效）
   - release: 正式发版 🎉
 
-- **1.8.1-beta2-20260207**
+- **1.8.1-beta2+20260207**
   - feat: 新增 `fileNameKeepSpaces` 配置项，支持保留文件名中的空格
   - feat: 新增 `fileNameSlashReplacement` 配置项，支持自定义文件名中斜杠`/`的替换字符（如 `-`、`&`、`_` 等）
   > 上面两项是神秘用户的要求，不过建议保持不变就好了捏，横杠`-`不是挺好的吗(
