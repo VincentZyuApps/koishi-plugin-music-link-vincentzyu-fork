@@ -22,26 +22,63 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 🎨 SVG 渲染模式 (v1.9.0+ 新增)
 
-> ✨ **resvg 渲染** - 比 Puppeteer 快 3 倍以上，资源占用极低！
+> ✨ ** resvg 渲染 [![resvg](https://img.shields.io/badge/resvg-powered-orange?style=flat-square&logo=rust)](https://github.com/linebender/resvg)** -  基于 Rust 编写的高性能 SVG 渲染器，不依赖浏览器！
+>
+> - 🦀 **Rust 驱动**：使用 Rust 编写，内存安全，性能卓越
+> - 💾 **低资源占用**：不依赖浏览器，内存和 CPU 占用极低
+> - 🎨 **高清晰度**：支持高 DPI 缩放，输出图片清晰锐利
+> - 🔧 **易于部署**：无需配置 Puppeteer 服务，开箱即用
+>
 
-#### 亮色模式（默认）
-![SVG 亮色模式预览](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/svg-bright-preview.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_svg.png](doc/preview-images/songlist_example_svg.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/discord_example.png](doc/preview-images/discord_example.png)
 
-#### 暗黑模式
-![SVG 暗黑模式预览](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/svg-dark-preview.png)
 
 ### 🖌️ Puppeteer 渲染模式（传统方式）
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png)
+> 🎭 ** Puppeteer 渲染 [![Puppeteer](https://img.shields.io/badge/Puppeteer-powered-blue?style=flat-square&logo=google-chrome)](https://github.com/puppeteer/puppeteer) ** - 基于浏览器的传统渲染方式
+>
+> - 🎨 **样式更加精美**：支持更多复杂样式和特效
+> - 📱 **兼容性更好**：基于标准浏览器渲染，支持更多 CSS 特性
+> - 🔧 **可定制性强**：支持多种渲染样式和自定义字体
+> - 📦 **功能丰富**：支持背景图片、模糊效果等高级特性
+>
+> ⚠️ **注意**：Puppeteer 渲染需要浏览器支持，内存占用较高
+> - 内存资源充裕的机器可以选择此模式
+> - 建议配置 Swap 以避免浏览器爆内存：[配置 Swap 指南](https://vincentzyu233.github.io/VincentZyu233/notes/system-config/swap.html)
+
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png](doc/preview-images/songlist_example_source.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png](doc/preview-images/songlist_example_flat.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](doc/preview-images/songlist_example_blurglass_lxgw_mahiro.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](doc/preview-images/onebot_example.png)
 
 ## fork 版本的更新日志
 
+- **1.9.1-beta.1+20260325** 🚀
+  - 🔧 **统一渲染器行为**
+    - 将 SVG 的 renderInfo 判断逻辑移至内部，与 Puppeteer 保持一致
+    - 简化 `render.js` 逻辑，移除冗余判断
+  - 🎨 **优化 SVG 布局**
+    - 右侧标签整体右移，提升视觉效果
+    - 左侧文字长度增加 2-3 个字符，减少省略号出现
+  - 🌙 **配置项重命名**
+    - 将 `darkMode` 改名为 `enablePuppeteerDarkMode`，命名更清晰
+  - 📝 **指令参数增强**
+    - 为 `command6` 和 `command9` 添加 `--mode` 参数
+    - 支持 `light` / `dark` / `白天` / `黑夜` 选项
+    - 优先级：命令行参数 > 配置项默认值
+  - ⚠️ **配置提示优化**
+    - 为 `svgWidth` 和 `svgColumns` 添加警告信息
+    - 提醒用户调整列数和宽度可能导致格式混乱
+  - 📦 **版本更新**
+    - 升级到 v1.9.1-beta.1+20260325
+
 - **1.9.0-beta.1+20260324** 🎉
-  - ✨ **新增 resvg 轻量级 SVG 渲染功能！**
-    - 🚀 **比 Puppeteer 资源占用低！**
+  - ✨ **新增 [![resvg](https://img.shields.io/badge/resvg-powered-orange?style=flat-square&logo=rust)](https://github.com/linebender/resvg) resvg 轻量级 SVG 渲染功能！**
+    - 🦀 **基于 Rust 编写**：内存安全，性能卓越
+    - 🚀 **比 Puppeteer 资源占用低！**（某些情况下 可能渲染还会更快捏）
+    - 💾 **不依赖浏览器**：内存和 CPU 占用极低
+    - 🔧 **易于部署**：无需配置 Puppeteer 服务
     - 📦 引入 `@resvg/resvg-js` 依赖，Puppeteer 依旧保持可选依赖
   - 🎨 **新增出图模式多选配置**
     - 📊 `renderMode` 配置项支持多选：`svg` / `puppeteer` / `text`

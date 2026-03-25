@@ -11,3 +11,8 @@ npm run pub music-link-vincentzyu-fork -- --registry https://registry.npmjs.org
 npm dist-tag add koishi-plugin-music-link-vincentzyu-fork@1.8.0-beta6-20251230 latest --registry https://registry.npmjs.org
 npm view koishi-plugin-music-link-vincentzyu-fork
 ```
+
+```bash
+cd /home/bawuyinguo/SSoftwareFiles/koishi/koishi-dev-4/external/music-link-vincentzyu-fork/lib
+wc -l *.js
+```
