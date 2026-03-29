@@ -54,6 +54,16 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## fork 版本的更新日志
 
+- **1.9.5-beta.1+20260329** 🚀
+  - ✨ **功能优化**
+    - 歌单列表显示格式优化：歌曲编号从 `1. 歌曲名` 改为 `(1) 歌曲名`，更清晰易读
+    - 尝试修复智能制表符对齐功能：然而并没有成功qwq
+  - 🐛 **问题修复**
+    - 修复 command6 搜索结果缺少平台标识的问题，现在会正确显示 `网易`的红色的 小圆角矩形tag~
+  - 💡 **文案优化**
+    - 将"出图模式"更名为"消息渲染模式"，描述更加准确
+    - 更新部分后端 API 描述文案
+
 - **1.9.4-beta.1+20260329** 🎉
   - 🔧 **代码重构**
     - 拆分 index.js 为多个模块文件（middleware.js, command6.js, command9.js）
