@@ -16,7 +16,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 > (66原作者怎么删了)
 
 ## fork此插件时候 上游仓库版本号:
-1.7.30
+1.9.x
 
 ## 效果预览
 
@@ -53,6 +53,19 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](doc/preview-images/onebot_example.png)
 
 ## fork 版本的更新日志
+
+- **1.9.4-beta.1+20260329** 🎉
+  - 🔧 **代码重构**
+    - 拆分 index.js 为多个模块文件（middleware.js, command6.js, command9.js）
+  - ✨ **新增 notifier 通知**
+    - 插件启动时在 WebUI 显示配置信息
+    - 显示资源文件（字体/图片）下载状态
+  - 🎨 **界面优化**
+    - 添加字体使用声明和插件许可声明（MIT）
+  - 🐛 **Bug 修复**
+    - 修复重复插件检测问题
+    - 修复序号输入错误 bug
+    - 修复私聊音乐卡片发送失败
 
 - **1.9.1-beta.1+20260325** 🚀
   - 🔧 **统一渲染器行为**
