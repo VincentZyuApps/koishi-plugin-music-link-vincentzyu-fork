@@ -53,6 +53,18 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](doc/preview-images/songlist_example_blurglass_lxgw_mahiro.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](doc/preview-images/onebot_example.png)
 
+### 💬 QQ Markdown 渲染模式（v1.9.6+ 新增）
+
+> 💬 ** QQ Markdown 渲染 ** - 专为 QQ 平台优化的 Markdown 格式
+>
+> - 🎯 **仅支持 QQ 平台**：利用 QQ 官方 Markdown 消息能力
+> - 📊 **两种显示风格**：支持表格风格和列表风格
+> - 💡 **交互友好**：清晰的退出提示和选择指南
+> - 🎨 **格式美观**：结构化布局，易于阅读
+
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_table.png](doc/preview-images/songlist_example_qq_markdown_table.png)
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_style.png](doc/preview-images/songlist_example_qq_markdown_style.png)
+
 ## fork 版本的更新日志
 
 - **1.9.5-beta.1+20260329** 🚀
@@ -188,6 +200,12 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 ### ⚠️ 重要：首次启动说明
 
 插件首次启动时，会自动从 Gitee Realase 下载所需的资源文件（字体和背景图片），**下载完成后才会注册指令和启动中间件**。
+
+#### 📢 Koishi WebUI 通知功能
+
+插件启动时会在 Koishi WebUI 中显示配置信息和资源文件下载状态，方便用户了解插件运行情况。
+
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/koishi_console_webui_plugin_setting_notifier_preview.png](doc/preview-images/koishi_console_webui_plugin_setting_notifier_preview.png)
 
 如果网络不稳定或自动下载失败，可以手动下载资源文件：
 
