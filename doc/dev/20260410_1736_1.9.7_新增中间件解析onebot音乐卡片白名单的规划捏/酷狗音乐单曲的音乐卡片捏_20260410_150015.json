@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3524309131,
+    "time": 1775804056,
+    "message_id": 1979704472,
+    "message_seq": 1979704472,
+    "real_id": 1979704472,
+    "real_seq": "11912",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3524309131,
+      "nickname": "Bruisa",
+      "card": "",
+      "role": "admin"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.music.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare_music\"&#44;\"config\":{\"ctime\":1775804026&#44;\"forward\":1&#44;\"token\":\"41bca4d487ec0caddded02c1a3037ec2\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":205141&#44;\"msg_seq\":7627020217415100782&#44;\"uin\":2551241772}&#44;\"meta\":{\"music\":{\"app_type\":1&#44;\"appid\":205141&#44;\"ctime\":1775804026&#44;\"desc\":\"Viktor Tsoi · Легенды русского рока - Th…\"&#44;\"jumpUrl\":\"https://m.kugou.com/share/song.html?chain=1mktpb2G0V3\"&#44;\"musicUrl\":\"https://m.kugou.com/api/v1/wechat/index?uuid=-&amp;album_audio_id=146432136&amp;ext=m4a&amp;apiver=2&amp;cmd=101&amp;album_id=19287419&amp;hash=7d5fda433d319b0ec9115cd913123eeb&amp;plat=0&amp;version=20553&amp;share_chl=qq_client&amp;mid=262354031304344342275976100274891890656&amp;key=1ff6b01c4f77982edc2863a149569ac4&amp;_t=1775804010&amp;user_id=2058702536&amp;sign=de11c6e068b95a839ca00e17aa6f6cf8\"&#44;\"preview\":\"http://imge.kugou.com/stdmusic/120/20200909/20200909143730765368.jpg\"&#44;\"tag\":\"酷狗音乐\"&#44;\"tagIcon\":\"https://open.gtimg.cn/open/app_icon/00/20/51/41/205141_100_m.png?t=1774401861\"&#44;\"title\":\"Группа крови (血型)\"&#44;\"uin\":2551241772}}&#44;\"prompt\":\"&#91;分享&#93;Группа крови (血型)\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"music\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.music.lua\",\"bizsrc\":\"qqconnect.sdkshare_music\",\"config\":{\"ctime\":1775804026,\"forward\":1,\"token\":\"41bca4d487ec0caddded02c1a3037ec2\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":205141,\"msg_seq\":7627020217415100782,\"uin\":2551241772},\"meta\":{\"music\":{\"app_type\":1,\"appid\":205141,\"ctime\":1775804026,\"desc\":\"Viktor Tsoi · Легенды русского рока - Th…\",\"jumpUrl\":\"https://m.kugou.com/share/song.html?chain=1mktpb2G0V3\",\"musicUrl\":\"https://m.kugou.com/api/v1/wechat/index?uuid=-&album_audio_id=146432136&ext=m4a&apiver=2&cmd=101&album_id=19287419&hash=7d5fda433d319b0ec9115cd913123eeb&plat=0&version=20553&share_chl=qq_client&mid=262354031304344342275976100274891890656&key=1ff6b01c4f77982edc2863a149569ac4&_t=1775804010&user_id=2058702536&sign=de11c6e068b95a839ca00e17aa6f6cf8\",\"preview\":\"http://imge.kugou.com/stdmusic/120/20200909/20200909143730765368.jpg\",\"tag\":\"酷狗音乐\",\"tagIcon\":\"https://open.gtimg.cn/open/app_icon/00/20/51/41/205141_100_m.png?t=1774401861\",\"title\":\"Группа крови (血型)\",\"uin\":2551241772}},\"prompt\":\"[分享]Группа крови (血型)\",\"ver\":\"0.0.0.1\",\"view\":\"music\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message",
+    "group_id": 1085190201,
+    "group_name": "3水_awa群"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 1596,
+  "stream": "normal-action"
+}

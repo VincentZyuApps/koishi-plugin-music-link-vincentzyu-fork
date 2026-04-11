@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3967912008,
+    "time": 1775813684,
+    "message_id": 943511876,
+    "message_seq": 943511876,
+    "real_id": 943511876,
+    "real_seq": "4697",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3967912008,
+      "nickname": "🤖-dev-bot-",
+      "card": "",
+      "role": "member"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.music.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare_music\"&#44;\"config\":{\"ctime\":1775813683&#44;\"forward\":1&#44;\"token\":\"914daa9c47695c83df821672aef917c1\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":100497308&#44;\"uin\":3264925726}&#44;\"meta\":{\"music\":{\"app_type\":1&#44;\"appid\":100497308&#44;\"ctime\":1775813683&#44;\"desc\":\"MIMI/重音テト\"&#44;\"jumpUrl\":\"https://y.qq.com/n/ryqq/songDetail/004KHRXR1bXwIL\"&#44;\"musicUrl\":\"http://isure6.stream.qqmusic.qq.com/F000004KHRXR1bXwIL.flac?fromtag=5&amp;guid=00000&amp;trace=79015c84c945bb38&amp;uin=1830540513&amp;vkey=6D926296F8BCEDBC65E5402A481E99B21724B1601F68758323E5052E1BF31DB71E94A48819F4F3435AA42AB6FE00495E50CA41B70484FD4E__v2b9aadcd\"&#44;\"preview\":\"https://y.gtimg.cn/music/photo_new/T002R800x800M000000cB1lw4Tj2Jy.jpg\"&#44;\"tag\":\"QQ音乐\"&#44;\"tagIcon\":\"https://p.qpic.cn/qqconnect/0/app_100497308_1626060999/100?max-age=2592000&amp;t=0\"&#44;\"title\":\"サイエンス (feat. 重音テト)\"&#44;\"uin\":3264925726}}&#44;\"prompt\":\"&#91;分享&#93;サイエンス (feat. 重音テト)\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"music\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.music.lua\",\"bizsrc\":\"qqconnect.sdkshare_music\",\"config\":{\"ctime\":1775813683,\"forward\":1,\"token\":\"914daa9c47695c83df821672aef917c1\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":100497308,\"uin\":3264925726},\"meta\":{\"music\":{\"app_type\":1,\"appid\":100497308,\"ctime\":1775813683,\"desc\":\"MIMI/重音テト\",\"jumpUrl\":\"https://y.qq.com/n/ryqq/songDetail/004KHRXR1bXwIL\",\"musicUrl\":\"http://isure6.stream.qqmusic.qq.com/F000004KHRXR1bXwIL.flac?fromtag=5&guid=00000&trace=79015c84c945bb38&uin=1830540513&vkey=6D926296F8BCEDBC65E5402A481E99B21724B1601F68758323E5052E1BF31DB71E94A48819F4F3435AA42AB6FE00495E50CA41B70484FD4E__v2b9aadcd\",\"preview\":\"https://y.gtimg.cn/music/photo_new/T002R800x800M000000cB1lw4Tj2Jy.jpg\",\"tag\":\"QQ音乐\",\"tagIcon\":\"https://p.qpic.cn/qqconnect/0/app_100497308_1626060999/100?max-age=2592000&t=0\",\"title\":\"サイエンス (feat. 重音テト)\",\"uin\":3264925726}},\"prompt\":\"[分享]サイエンス (feat. 重音テト)\",\"ver\":\"0.0.0.1\",\"view\":\"music\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message_sent",
+    "message_sent_type": "self",
+    "group_id": 995714279,
+    "group_name": "奶冻-dev-dev2-bot"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 92,
+  "stream": "normal-action"
+}

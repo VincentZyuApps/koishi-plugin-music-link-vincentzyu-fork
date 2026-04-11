@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3524309131,
+    "time": 1775801488,
+    "message_id": 396903201,
+    "message_seq": 396903201,
+    "real_id": 396903201,
+    "real_seq": "11867",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3524309131,
+      "nickname": "Bruisa",
+      "card": "",
+      "role": "admin"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.tuwen.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare\"&#44;\"config\":{\"ctime\":1775801487&#44;\"forward\":1&#44;\"token\":\"f27b1e424fa63b27c87a1488e625e512\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"msg_seq\":7627009312283420061&#44;\"uin\":3524309131}&#44;\"meta\":{\"news\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"ctime\":1775801487&#44;\"desc\":\"phiraser\"&#44;\"jumpUrl\":\"https://music.163.com/m/playlist?id=6855069696&amp;creatorId=5070639705\"&#44;\"preview\":\"https://p1.music.126.net/0rplKu2AKfJSo-BQWqqhwA==/109951168563062142.jpg?imageView=1&amp;thumbnail=1440z3096&amp;type=webp&amp;quality=80\"&#44;\"tag\":\"网易云音乐\"&#44;\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\"&#44;\"title\":\"分享歌单: &#91;Phigros&#93; v3.19.1收录曲目(持续…\"&#44;\"uin\":3524309131}}&#44;\"prompt\":\"&#91;分享&#93;分享歌单: &#91;Phigros&#93; v3.19.1收录曲目(持续…\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"news\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.tuwen.lua\",\"bizsrc\":\"qqconnect.sdkshare\",\"config\":{\"ctime\":1775801487,\"forward\":1,\"token\":\"f27b1e424fa63b27c87a1488e625e512\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":100495085,\"msg_seq\":7627009312283420061,\"uin\":3524309131},\"meta\":{\"news\":{\"app_type\":1,\"appid\":100495085,\"ctime\":1775801487,\"desc\":\"phiraser\",\"jumpUrl\":\"https://music.163.com/m/playlist?id=6855069696&creatorId=5070639705\",\"preview\":\"https://p1.music.126.net/0rplKu2AKfJSo-BQWqqhwA==/109951168563062142.jpg?imageView=1&thumbnail=1440z3096&type=webp&quality=80\",\"tag\":\"网易云音乐\",\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\",\"title\":\"分享歌单: [Phigros] v3.19.1收录曲目(持续…\",\"uin\":3524309131}},\"prompt\":\"[分享]分享歌单: [Phigros] v3.19.1收录曲目(持续…\",\"ver\":\"0.0.0.1\",\"view\":\"news\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message",
+    "group_id": 1085190201,
+    "group_name": "3水_awa群"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 1466,
+  "stream": "normal-action"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3524309131,
+    "time": 1775804112,
+    "message_id": 110885096,
+    "message_seq": 110885096,
+    "real_id": 110885096,
+    "real_seq": "11917",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3524309131,
+      "nickname": "Bruisa",
+      "card": "",
+      "role": "admin"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.tuwen.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare\"&#44;\"config\":{\"ctime\":1775804111&#44;\"forward\":1&#44;\"token\":\"9b737dbe106751aab550150708fd189c\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":101944154&#44;\"msg_seq\":7627020572530515388&#44;\"uin\":3524309131}&#44;\"meta\":{\"news\":{\"app_type\":1&#44;\"appid\":101944154&#44;\"ctime\":1775804111&#44;\"desc\":\"MIMI/初音未来/可不\"&#44;\"jumpUrl\":\"https://i.y.qq.com/n2/m/musiclite/playsong/index.html?app_type=qmlite&amp;&amp;songmid=004cCrWJ0ZtRUu\"&#44;\"preview\":\"https://pic.ugcimg.cn/320d84269df7bfc30df4df3f70145e32/jpg1\"&#44;\"tag\":\"MIUI音乐\"&#44;\"tagIcon\":\"https://p.qpic.cn/qqconnect/0/app_101944154_1617176822/100?max-age=2592000&amp;t=0\"&#44;\"title\":\"はぐ (feat. 初音ミク &amp; 可不)\"&#44;\"uin\":3524309131}}&#44;\"prompt\":\"&#91;分享&#93;はぐ (feat. 初音ミク &amp; 可不)\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"news\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.tuwen.lua\",\"bizsrc\":\"qqconnect.sdkshare\",\"config\":{\"ctime\":1775804111,\"forward\":1,\"token\":\"9b737dbe106751aab550150708fd189c\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":101944154,\"msg_seq\":7627020572530515388,\"uin\":3524309131},\"meta\":{\"news\":{\"app_type\":1,\"appid\":101944154,\"ctime\":1775804111,\"desc\":\"MIMI/初音未来/可不\",\"jumpUrl\":\"https://i.y.qq.com/n2/m/musiclite/playsong/index.html?app_type=qmlite&&songmid=004cCrWJ0ZtRUu\",\"preview\":\"https://pic.ugcimg.cn/320d84269df7bfc30df4df3f70145e32/jpg1\",\"tag\":\"MIUI音乐\",\"tagIcon\":\"https://p.qpic.cn/qqconnect/0/app_101944154_1617176822/100?max-age=2592000&t=0\",\"title\":\"はぐ (feat. 初音ミク & 可不)\",\"uin\":3524309131}},\"prompt\":\"[分享]はぐ (feat. 初音ミク & 可不)\",\"ver\":\"0.0.0.1\",\"view\":\"news\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message",
+    "group_id": 1085190201,
+    "group_name": "3水_awa群"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 1638,
+  "stream": "normal-action"
+}

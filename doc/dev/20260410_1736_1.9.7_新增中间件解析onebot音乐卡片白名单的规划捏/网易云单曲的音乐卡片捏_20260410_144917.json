@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3837643081,
+    "time": 1775803718,
+    "message_id": 1972251156,
+    "message_seq": 1972251156,
+    "real_id": 1972251156,
+    "real_seq": "11894",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3837643081,
+      "nickname": "🤖-awa-bot-",
+      "card": "",
+      "role": "admin"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.music.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare_music\"&#44;\"config\":{\"ctime\":1775803718&#44;\"forward\":1&#44;\"token\":\"d936a50880f1cfffe68d9885ec490d49\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"uin\":3264925726}&#44;\"meta\":{\"music\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"ctime\":1775803718&#44;\"desc\":\"MIMI\"&#44;\"jumpUrl\":\"https://music.163.com/#/song?id=2656567752\"&#44;\"musicUrl\":\"http://m801.music.126.net/20260410151338/43129a704885588d52d081b5314a5f5f/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/57067848263/25da/f925/aabc/59d937aa5ab5161e2bedecf795998e48.mp3\"&#44;\"preview\":\"https://p2.music.126.net/qP85jcrONLD1jtRSFoffFw==/109951170261457989.jpg\"&#44;\"tag\":\"网易云音乐\"&#44;\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\"&#44;\"title\":\"サイエンス (feat. 重音テト)\"&#44;\"uin\":3264925726}}&#44;\"prompt\":\"&#91;分享&#93;サイエンス (feat. 重音テト)\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"music\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.music.lua\",\"bizsrc\":\"qqconnect.sdkshare_music\",\"config\":{\"ctime\":1775803718,\"forward\":1,\"token\":\"d936a50880f1cfffe68d9885ec490d49\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":100495085,\"uin\":3264925726},\"meta\":{\"music\":{\"app_type\":1,\"appid\":100495085,\"ctime\":1775803718,\"desc\":\"MIMI\",\"jumpUrl\":\"https://music.163.com/#/song?id=2656567752\",\"musicUrl\":\"http://m801.music.126.net/20260410151338/43129a704885588d52d081b5314a5f5f/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/57067848263/25da/f925/aabc/59d937aa5ab5161e2bedecf795998e48.mp3\",\"preview\":\"https://p2.music.126.net/qP85jcrONLD1jtRSFoffFw==/109951170261457989.jpg\",\"tag\":\"网易云音乐\",\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\",\"title\":\"サイエンス (feat. 重音テト)\",\"uin\":3264925726}},\"prompt\":\"[分享]サイエンス (feat. 重音テト)\",\"ver\":\"0.0.0.1\",\"view\":\"music\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message",
+    "group_id": 1085190201,
+    "group_name": "3水_awa群"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 1486,
+  "stream": "normal-action"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "self_id": 3967912008,
+    "user_id": 3524309131,
+    "time": 1775801362,
+    "message_id": 1260847049,
+    "message_seq": 1260847049,
+    "real_id": 1260847049,
+    "real_seq": "11862",
+    "message_type": "group",
+    "sender": {
+      "user_id": 3524309131,
+      "nickname": "Bruisa",
+      "card": "",
+      "role": "admin"
+    },
+    "raw_message": "[CQ:json,data={\"app\":\"com.tencent.tuwen.lua\"&#44;\"bizsrc\":\"qqconnect.sdkshare\"&#44;\"config\":{\"ctime\":1775775092&#44;\"forward\":1&#44;\"token\":\"9c87630782050af417e348adc27c6e5f\"&#44;\"type\":\"normal\"}&#44;\"extra\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"msg_seq\":7626895945511627646&#44;\"uin\":3524309131}&#44;\"meta\":{\"news\":{\"app_type\":1&#44;\"appid\":100495085&#44;\"ctime\":1775775092&#44;\"desc\":\"by 蓝蚀白瑜\"&#44;\"jumpUrl\":\"https://st.music.163.com/listen-together/share/index.html?roomId=a6d5cc531df4d831ffeb3beceae8f148_1775775072&amp;inviterId=8639868280&amp;songId=2085790747\"&#44;\"preview\":\"http://p1.music.126.net/pS10FAJIhE-TRvv5tqJ78g==/109951172407224644.jpg?imageView=1&amp;thumbnail=1440z2304&amp;type=webp&amp;quality=80\"&#44;\"tag\":\"网易云音乐\"&#44;\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\"&#44;\"title\":\"我的耳机分你一半，和我一起听歌吧～\"&#44;\"uin\":3524309131}}&#44;\"prompt\":\"&#91;分享&#93;我的耳机分你一半，和我一起听歌吧～\"&#44;\"ver\":\"0.0.0.1\"&#44;\"view\":\"news\"}]",
+    "font": 14,
+    "sub_type": "normal",
+    "message": [
+      {
+        "type": "json",
+        "data": {
+          "data": "{\"app\":\"com.tencent.tuwen.lua\",\"bizsrc\":\"qqconnect.sdkshare\",\"config\":{\"ctime\":1775775092,\"forward\":1,\"token\":\"9c87630782050af417e348adc27c6e5f\",\"type\":\"normal\"},\"extra\":{\"app_type\":1,\"appid\":100495085,\"msg_seq\":7626895945511627646,\"uin\":3524309131},\"meta\":{\"news\":{\"app_type\":1,\"appid\":100495085,\"ctime\":1775775092,\"desc\":\"by 蓝蚀白瑜\",\"jumpUrl\":\"https://st.music.163.com/listen-together/share/index.html?roomId=a6d5cc531df4d831ffeb3beceae8f148_1775775072&inviterId=8639868280&songId=2085790747\",\"preview\":\"http://p1.music.126.net/pS10FAJIhE-TRvv5tqJ78g==/109951172407224644.jpg?imageView=1&thumbnail=1440z2304&type=webp&quality=80\",\"tag\":\"网易云音乐\",\"tagIcon\":\"https://i.gtimg.cn/open/app_icon/00/49/50/85/100495085_100_m.png\",\"title\":\"我的耳机分你一半，和我一起听歌吧～\",\"uin\":3524309131}},\"prompt\":\"[分享]我的耳机分你一半，和我一起听歌吧～\",\"ver\":\"0.0.0.1\",\"view\":\"news\"}"
+        }
+      }
+    ],
+    "message_format": "array",
+    "post_type": "message",
+    "group_id": 1085190201,
+    "group_name": "3水_awa群"
+  },
+  "message": "",
+  "wording": "",
+  "echo": 1448,
+  "stream": "normal-action"
+}
