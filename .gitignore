@@ -3,6 +3,8 @@ assets/*
 
 # But keep the assets folder itself
 !assets/.gitkeep
+!assets/songlist-test.json
+!assets/generate-test-data.py
  
 # Ignore temp folder in lib
 lib/temp/
