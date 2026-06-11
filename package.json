@@ -37,5 +37,15 @@
     "puppeteer": {
       "optional": true
     }
+  },
+  "koishi": {
+    "description": {
+      "en": "Search and download music from QQ/NetEase Cloud Music.",
+      "zh": "搜索音乐资源，提供QQ、网易云平台的音乐下载"
+    },
+    "service": {
+      "required": ["http", "i18n"],
+      "optional": ["puppeteer", "notifier"]
+    }
   }
 }

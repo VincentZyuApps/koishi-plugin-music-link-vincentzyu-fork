@@ -8,6 +8,7 @@ assets/*
 lib/temp/
 lib/temp/*changes.diff
 tmp/
-cache
+temp/
+cache/
 
 node_modules/
