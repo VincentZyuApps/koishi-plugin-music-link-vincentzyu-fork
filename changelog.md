@@ -2,6 +2,42 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.9.11-beta.3+20260613** 🎨
+  - ✨ **Canvas 歌单渲染正式接入**
+    - 新增基于 `@napi-rs/canvas (Skia)` 的 Canvas 歌单渲染器 `lib/renderer-canvas.js`
+    - `renderMode` 新增 `canvas` 模式，可与 `text` / `svg` / `puppeteer` / `QQ Markdown` 组合使用
+    - 启动日志、notifier 配置摘要、渲染模式解析流程全部补齐 Canvas 分支
+  - 🖼️ **Canvas 画面与样式能力**
+    - 新增 `canvasScale`，支持通过内部缩放倍率提升清晰度
+    - 新增 `canvasDarkMode`、`canvasThemeColor`、`canvasWidth`、`canvasColumns`、`canvasColumnLayoutMode`
+    - 新增 `canvasShowSongDividers`、`canvasShowSongBackground`、`canvasShowVersionInfo`、`canvasShowRenderInfo`
+    - 支持底部版本信息、仓库信息、渲染耗时与 scale 倍率显示
+  - 🔤 **Canvas 字体与排版修复**
+    - 新增 `canvasEnableCustomFont`、`canvasFontFiles`、`canvasFontFamilies`
+    - 修复 Canvas 中文字体匹配问题，默认字体族改为真实 family `LXGW WenKai Mono`
+    - 调整标题 / 歌手 / 专辑的垂直对齐，减轻文字整体偏下的问题
+    - 微调主要文本字重，让标题与标签不再显得过粗
+  - 🎵 **细节视觉优化**
+    - 左上角标题改为带音乐 emoji 的 `🎧 歌单`
+    - 底部版本信息增加 emoji 前缀，并补充 emoji fallback 字体链
+  - 🧪 **测试与开发辅助**
+    - 新增 `test/test-font/probe_font.py`，用于检查字体元数据与字形覆盖
+    - 新增 `test/test-font/probe_napi_canvas.js`，用于验证 `@napi-rs/canvas` 的字体注册与真实 family 命中情况
+    - 原 `test/` 下的 resvg 测试资源迁移整理到 `test/test-resvg/`
+
+- **1.9.10-beta.2+20260612** 📤
+  - ✨ **官 QQ Bot / QQ 平台传文件支持**
+    - 新增 QQ 平台文件上传分支，支持将 `file` 类型结果直接作为文件发送
+    - `crack` 适配器继续走 `h.file()` / 分片上传链路
+    - `official` 官 bot 适配器改为直接调用上传接口，补齐群文件发送能力
+  - 🧰 **文件发送链路拆分**
+    - `utils.js` 新增 `sendQQFile`、`isCrackAdapter` 等辅助函数
+    - 统一处理 base64 / 本地文件路径 / 临时文件清理等差异
+  - 🧱 **工程整理**
+    - 拆出 `i18n.js` 国际化模块
+    - 版本号升级到 `1.9.10-beta.2+20260612`
+    - 补充官 QQ Bot 分片上传相关开发文档
+
 - **1.9.9+20260607** 📦
   - 🗂️ **整理仓库结构**
     - 将 `tmp/拆分计划捏.md` 迁移到 `doc/dev/202604.拆分计划捏.md`
