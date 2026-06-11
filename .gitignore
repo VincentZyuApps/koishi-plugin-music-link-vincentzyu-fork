@@ -12,3 +12,9 @@ temp/
 cache/
 
 node_modules/
+
+# Ignore Python virtual environments anywhere in the repo
+venv/
+.venv/
+**/venv/
+**/.venv/
