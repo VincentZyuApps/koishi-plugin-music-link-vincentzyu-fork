@@ -27,6 +27,18 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ## 效果预览
 
+### 🎨 Canvas 渲染模式 (v1.9.11+ 新增)
+
+> ⚡ ** Canvas 渲染 [![Skia](https://img.shields.io/badge/Skia-powered-1f6feb?style=flat-square)](https://github.com/Brooooooklyn/canvas) ** - 基于 `@napi-rs/canvas` / Skia 的轻量高速渲染方案
+>
+> - 🚀 **渲染很快**：整体出图速度通常明显快于 Puppeteer
+> - 🪶 **更轻量**：不依赖浏览器进程，部署和运行成本更低
+> - 🔍 **支持内部缩放**：可通过 `canvasScale` 提升清晰度
+> - 🔤 **支持自定义字体**：可加载 `LXGW WenKai Mono` 等字体用于中文歌单渲染
+>
+
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_canvas.png](doc/preview-images/songlist_example_canvas.png)
+
 ### 🎨 SVG 渲染模式 (v1.9.0+ 新增)
 
 > ✨ ** resvg 渲染 [![resvg](https://img.shields.io/badge/resvg-powered-orange?style=flat-square&logo=rust)](https://github.com/linebender/resvg)** -  基于 Rust 编写的高性能 SVG 渲染器，不依赖浏览器！
@@ -70,6 +82,12 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_table.png](doc/preview-images/songlist_example_qq_markdown_table.png)
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_style.png](doc/preview-images/songlist_example_qq_markdown_style.png)
+
+### 🐧 QQ 官 Bot 效果预览
+
+> 📤 ** QQ 平台图文 / 语音 / 文件发送效果 ** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
+
+![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/qq_example.png](doc/preview-images/qq_example.png)
 
 -----
 

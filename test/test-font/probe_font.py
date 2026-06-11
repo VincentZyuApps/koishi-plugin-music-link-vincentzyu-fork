@@ -1,9 +1,3 @@
-"""
-uv venv
-uv pip install fonttools Pillow
-uv run ./probe_font.py
-"""
-
 import argparse
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont  # type: ignore
