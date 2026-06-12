@@ -2,6 +2,26 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.9.11-beta.4+20260613** 🖌️
+  - 🎯 **渲染默认值调整**
+    - 默认渲染模式改为仅启用 `canvas`，`text` / `puppeteer` / `svg` 默认关闭
+    - SVG 默认缩放倍率从 `3.3x` 调低至 `2.5x`，平衡清晰度与性能
+  - ✂️ **长文本溢出改为右侧裁切**
+    - Canvas / SVG 统一去掉 `truncate()` 省略号逻辑
+    - 改用 `clip-path` 右侧裁切，避免 ... 占用显示空间，长文本更自然
+  - 🧹 **代码清理**
+    - Canvas 渲染器移除 Unicode 转义，改用直观的中文字面量
+    - SVG 渲染器移除 `truncate()` 函数，统一文本溢出处理
+  - 🏗️ **渲染信息 emoji 调整**
+    - resvg 渲染统计 emoji：`🚀` → `🏗️`（更贴合管线渲染的技术特征）
+    - Canvas 渲染统计 emoji 由 Unicode 转义改为字面量 `🎨`
+  - 🧪 **字体探针增强**
+    - `test/test-font/` 新增 5 张 Canvas 字体探针输出图，用于验证字体族匹配与 fallback 链路
+  - 📝 **文档与预览**
+    - readme 新增 Canvas 渲染模式预览说明
+    - 新增 QQ 官 Bot 平台图文 / 语音 / 文件发送效果预览图
+    - 精简 test-font / test-resvg 的 README 说明
+
 - **1.9.11-beta.3+20260613** 🎨
   - ✨ **Canvas 歌单渲染正式接入**
     - 新增基于 `@napi-rs/canvas (Skia)` 的 Canvas 歌单渲染器 `lib/renderer-canvas.js`
