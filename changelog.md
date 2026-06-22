@@ -2,6 +2,27 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.10.0-beta.5+20260623** 🎶
+  - ✨ **`command9` 多平台聚合与酷狗接入**
+    - `command9` 平台配置从旧单平台模型扩展为 `command9_platforms` 多选模型
+    - 支持 `netease` / `tencent` / `kugou` 三平台选择；多选即聚合，不再单独保留旧 `aggregation` 选项
+    - 新增酷狗独立音质配置 `command9_KugouMusicQuality`
+  - 🔎 **聚合搜索与回源逻辑增强**
+    - `command9` 聚合搜索改为按所选平台并行请求，再交替合并结果
+    - 搜索结果保留歌曲所属平台信息，后续选歌时按歌曲实际平台回源请求详情
+    - 酷狗详情请求补齐 `hash` / `album_id` / `album_audio_id` 参数透传
+    - 多平台模式下新增数量分配说明：每个平台按 `ceil(Len / n)` 请求，因此总量更接近目标值而非严格上限
+  - 🏷️ **歌单卡片平台标签扩展**
+    - SVG / Canvas 歌单卡片新增酷狗平台 tag
+    - 统一支持 `网易` / `QQ` / `酷狗` 三平台标签与对应配色
+  - 🪵 **日志与配置文案整理**
+    - `command6` / `command9` / `render` / `middleware` / `utils` / `index` 等模块的日志补充 emoji 前缀
+    - `config.js` 中与 `command9`、后端选择、返回字段等相关配置说明补充 emoji 与更明确的文案
+  - 📖 **README / NOTICE / LICENSE 同步更新**
+    - readme 补充三平台支持、自建 API 为官方 `v2` 超集、酷狗音质说明与多平台数量分配公式
+    - `LICENSE` 收敛为标准 MIT 文本，新增 `NOTICE.md` 承接项目说明与字体声明
+    - `NOTICE.md` 改为更适合 GitHub Markdown 阅读的版式，并为字体来源补充 badge 跳转
+
 - **1.9.11-beta.4+20260613** 🖌️
   - 🎯 **渲染默认值调整**
     - 默认渲染模式改为仅启用 `canvas`，`text` / `puppeteer` / `svg` 默认关闭

@@ -2,10 +2,6 @@ MIT License
 
 Copyright (c) 2024-present music-link-vincentzyu-fork Contributors
 
-Project: koishi-plugin-music-link-vincentzyu-fork
-GitHub: https://github.com/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork
-Gitee: https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -23,58 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-===============================================================================
-
-字体使用声明 / Font Usage Declaration
-
-本插件使用以下开源字体进行图像渲染：
-
-1. 思源宋体（Source Han Serif SC）
-   - 来源：https://github.com/adobe-fonts/source-han-serif
-   - 许可证：SIL Open Font License 1.1
-   - 版权所有：Adobe Systems Incorporated
-   - 说明：由 Adobe 与 Google 联合开发的开源泛中日韩字体
-
-2. 霞鹜文楷（LXGW WenKai）
-   - 来源：https://github.com/lxgw/LxgwWenKai
-   - 许可证：SIL Open Font License 1.1
-   - 版权所有：LXGW (落霞孤鹜)
-   - 说明：基于 FONTWORKS 出品的 Klee One 字体衍生
-
-3. Noto Color Emoji
-   - 来源：https://fonts.google.com/noto/specimen/Noto+Color+Emoji
-   - 许可证：SIL Open Font License 1.1
-   - 版权所有：Google Inc.
-   - 说明：Google 开发的彩色 Emoji 字体
-
-以上字体均遵循 SIL Open Font License 1.1 开源协议，可在本项目中自由使用、
-修改与发布。感谢所有开源字体项目的贡献者！
-
-===============================================================================
-
-Font Usage Declaration (English)
-
-This plugin uses the following open-source fonts for image rendering:
-
-1. Source Han Serif (思源宋体)
-   - Source: https://github.com/adobe-fonts/source-han-serif
-   - License: SIL Open Font License 1.1
-   - Copyright: Adobe Systems Incorporated
-   - Description: An open-source Pan-CJK font developed by Adobe and Google
-
-2. LXGW WenKai (霞鹜文楷)
-   - Source: https://github.com/lxgw/LxgwWenKai
-   - License: SIL Open Font License 1.1
-   - Copyright: LXGW
-   - Description: Derived from FONTWORKS' Klee One font
-
-3. Noto Color Emoji
-   - Source: https://fonts.google.com/noto/specimen/Noto+Color+Emoji
-   - License: SIL Open Font License 1.1
-   - Copyright: Google Inc.
-   - Description: Google's color emoji font
-
-All fonts above are licensed under SIL Open Font License 1.1 and can be freely
-used, modified, and distributed in this project. Thanks to all contributors of
-these open-source font projects!
