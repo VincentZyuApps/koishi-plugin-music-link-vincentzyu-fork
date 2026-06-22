@@ -91,16 +91,16 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 -----
 
-## 📋 以下为原始仓库 readme（已修改适配）
+## 📋 以下为部分原始仓库 readme（修改过部分内容与格式）
 
 # 🎵 koishi-plugin-music-link
 
-🎵 **音乐下载** - 搜索并提供QQ音乐和网易云音乐平台的歌曲下载链接，🤩付费的也可以欸！？
+🎵 **音乐下载** - 搜索并提供多个音乐平台的歌曲下载链接，🤩付费的也可以欸！？
 
 ## 特点
 
-- **搜索歌曲**：🤩 支持QQ音乐和网易云音乐平台的歌曲搜索。
-- **下载歌曲**：🎶 QQ平台支持以不同音质下载歌曲，满足不同的音乐体验需求。提供免费以及付费音乐的下载链接。
+- **搜索歌曲**：🤩 支持QQ音乐、网易云音乐、酷狗音乐平台的歌曲搜索。
+- **下载歌曲**：🎶 多个平台支持以不同音质下载歌曲，满足不同的音乐体验需求。提供免费以及付费音乐的下载链接。
 - **歌曲详情**：🎧 获取包括音质、大小和下载链接在内的歌曲详细信息。
 - **友好交互**：📱 简单易用的指令，快速获取你喜欢的音乐。
 
@@ -177,15 +177,59 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 **后端选择：**
 - **`api.vkeys.cn/v2`** (落月api官方)
-  - ✅ 支持**网易云 + QQ音乐**
-  - ✅ 支持多音质选择（64k - Master母带）
-  - ✅ 支持聚合搜索（双平台同时搜索）
+  - ✅ 支持**网易云 + QQ音乐 + 酷狗音乐**
+  - ✅ 支持多音质选择（标准音质 - Master/Hi-Res）
+  - ✅ 支持按所选平台聚合搜索（多选即聚合）
   - 🎯 **网易云最高支持：超清母带 (Master)**
   - 🎯 **QQ音乐最高支持：臻品母带2.0**
+  - 🎯 **酷狗最高支持：Hi-Res / SQ无损 / HQ高品质 / 标准音质**
 
 - **`http://xwl.vincentzyu233.cn:51217`** (作者自建)
-  - ✅ 与官方API功能相同
-  - ⚠️ 如果挂了可以去QQ群：259248174 叫我
+  - ✅ 是官方 `v2` API 的超集，兼容官方现有能力
+  - ✅ 额外增加了酷狗音乐 API 等扩展能力
+  - ⚠️ 如果挂了可以去QQ群：`1085190201` 艾特作者 `@VincentZyu`
+
+**当前 `command9` 聚合搜索说明：**
+
+- ✅ 配置项 `command9_platforms` 支持 `netease` / `tencent` / `kugou`
+- ✅ 勾选一个平台时，为单平台搜索
+- ✅ 勾选多个平台时，会并行请求后交替合并结果
+- ⚠️ `command9_searchListLength` 在多平台模式下更像“目标总量参考值”，不是严格上限
+- 📌 例如勾选 3 个平台并设置 `50` 时，当前实现会按每平台 `ceil(50 / 3) = 17` 请求，最终最多得到 `17 * 3 = 51` 条
+
+**多平台数量分配公式：**
+
+设：
+
+- `Len` = 配置项 `command9_searchListLength`
+- `n` = 当前勾选的平台数
+- `m` = 每个平台实际请求的数量
+
+则当前实现采用：
+
+$$
+m = \left\lceil \frac{Len}{n} \right\rceil
+$$
+
+其中 $\lceil x \rceil$ 表示“上取整”，即取大于等于 $x$ 的最小整数。
+
+代入一个具体例子：
+
+$$
+Len = 50,\quad n = 3
+$$
+
+$$
+m = \left\lceil \frac{50}{3} \right\rceil
+  = \left\lceil 16.666\ldots \right\rceil
+  = 17
+$$
+
+所以最多返回：
+
+$$
+n \cdot m = 3 \cdot 17 = 51
+$$
 
 **落月api音质等级说明：**
 
@@ -202,6 +246,14 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 | 🎶 QQ音乐 | Hi-Res | Hi-Res 音质 |
 | 🎶 QQ音乐 | 杜比全景声 | Dolby Atmos |
 | 🎶 QQ音乐 | 臻品母带 2.0 | Master 2.0 |
+| 🐶 酷狗音乐 | 标准音质 | 128 |
+| 🐶 酷狗音乐 | HQ高品质 | 320 |
+| 🐶 酷狗音乐 | SQ无损 | FLAC |
+| 🐶 酷狗音乐 | Hi-Res | high |
+
+> 💡 酷狗当前在插件里的可选质量参数为：`128`、`320`、`flac`、`high`
+>
+> ⚠️ 多平台聚合或酷狗模式下，当前更推荐“先搜索再选歌”；ID 直点场景没有像单平台网易云 / QQ 那样做完整直通适配。
 
 ---
 
