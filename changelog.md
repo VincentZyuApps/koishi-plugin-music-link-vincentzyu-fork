@@ -2,6 +2,13 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.10.0-beta.8+20260623** 🖼️
+  - 🎨 默认开启 `markdown_style` 渲染模式
+  - 🏷️ NOTICE.md 字体来源 badge 统一为 `Font Source`
+  - 🖼️ 更新歌单预览图（canvas + svg）
+  - 🪄 config.js 所有 `describe` 字段补全 emoji 前缀
+  - 🔑 用户自定义字段表格增加 `key` / `备注` emoji 标识
+
 - **1.10.0-beta.5+20260623** 🎶
   - ✨ **`command9` 多平台聚合与酷狗接入**
     - `command9` 平台配置从旧单平台模型扩展为 `command9_platforms` 多选模型
