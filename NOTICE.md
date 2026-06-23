@@ -14,7 +14,7 @@ This plugin uses the following open-source fonts for image rendering:
 
 ### 1. Source Han Serif (思源宋体)
 
-[![Source Han Serif](https://img.shields.io/badge/Source%20Han%20Serif-Adobe%20%26%20Google-2D9CDB?style=flat-square)](https://github.com/adobe-fonts/source-han-serif)
+[![Source Han Serif](https://img.shields.io/badge/Source%20Han%20Serif-Font%20Source-181717?style=flat-square)](https://github.com/adobe-fonts/source-han-serif)
 
 - Source: <https://github.com/adobe-fonts/source-han-serif>
 - License: `SIL Open Font License 1.1`
@@ -23,7 +23,7 @@ This plugin uses the following open-source fonts for image rendering:
 
 ### 2. LXGW WenKai (霞鹜文楷)
 
-[![LXGW WenKai](https://img.shields.io/badge/LXGW%20WenKai-LXGW-5C7CFA?style=flat-square)](https://github.com/lxgw/LxgwWenKai)
+[![LXGW WenKai](https://img.shields.io/badge/LXGW%20WenKai-Font%20Source-181717?style=flat-square)](https://github.com/lxgw/LxgwWenKai)
 
 - Source: <https://github.com/lxgw/LxgwWenKai>
 - License: `SIL Open Font License 1.1`
@@ -32,7 +32,7 @@ This plugin uses the following open-source fonts for image rendering:
 
 ### 3. Noto Color Emoji
 
-[![Noto Color Emoji](https://img.shields.io/badge/Noto%20Color%20Emoji-Google-34A853?style=flat-square)](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
+[![Noto Color Emoji](https://img.shields.io/badge/Noto%20Color%20Emoji-Font%20Source-181717?style=flat-square)](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 
 - Source: <https://fonts.google.com/noto/specimen/Noto+Color+Emoji>
 - License: `SIL Open Font License 1.1`
@@ -50,7 +50,7 @@ modified, and distributed in this project under their respective terms.
 
 ### 1. 思源宋体（Source Han Serif SC）
 
-[![Source Han Serif](https://img.shields.io/badge/思源宋体-Adobe%20%26%20Google-2D9CDB?style=flat-square)](https://github.com/adobe-fonts/source-han-serif)
+[![Source Han Serif](https://img.shields.io/badge/思源宋体-字体来源-181717?style=flat-square)](https://github.com/adobe-fonts/source-han-serif)
 
 - 来源：<https://github.com/adobe-fonts/source-han-serif>
 - 许可证：`SIL Open Font License 1.1`
@@ -59,7 +59,7 @@ modified, and distributed in this project under their respective terms.
 
 ### 2. 霞鹜文楷（LXGW WenKai）
 
-[![LXGW WenKai](https://img.shields.io/badge/霞鹜文楷-LXGW-5C7CFA?style=flat-square)](https://github.com/lxgw/LxgwWenKai)
+[![LXGW WenKai](https://img.shields.io/badge/霞鹜文楷-字体来源-181717?style=flat-square)](https://github.com/lxgw/LxgwWenKai)
 
 - 来源：<https://github.com/lxgw/LxgwWenKai>
 - 许可证：`SIL Open Font License 1.1`
@@ -68,7 +68,7 @@ modified, and distributed in this project under their respective terms.
 
 ### 3. Noto Color Emoji
 
-[![Noto Color Emoji](https://img.shields.io/badge/Noto%20Color%20Emoji-Google-34A853?style=flat-square)](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
+[![Noto Color Emoji](https://img.shields.io/badge/Noto%20Color%20Emoji-字体来源-181717?style=flat-square)](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 
 - 来源：<https://fonts.google.com/noto/specimen/Noto+Color+Emoji>
 - 许可证：`SIL Open Font License 1.1`
