@@ -1,19 +1,17 @@
-# Ignore all files in assets folder
-assets/*
-
-# But keep the assets folder itself
-!assets/.gitkeep
+# 📦🚫 运行时资源目录：字体 / 背景图会自动下载到 Koishi data/assets，不再提交插件包内 assets
+assets/
  
-# Ignore temp folder in lib
+# 🧪🗑️ 临时目录 / 差异补丁 / 缓存文件
 lib/temp/
 lib/temp/*changes.diff
 tmp/
 temp/
 cache/
 
+# 📚🚫 依赖目录
 node_modules/
 
-# Ignore Python virtual environments anywhere in the repo
+# 🐍🚫 Python 虚拟环境
 venv/
 .venv/
 **/venv/

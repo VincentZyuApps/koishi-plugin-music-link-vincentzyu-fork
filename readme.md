@@ -121,21 +121,23 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/koishi_console_webui_plugin_setting_notifier_preview.png](doc/preview-images/koishi_console_webui_plugin_setting_notifier_preview.png)
 
+首次启动会自动下载资源到 `ctx.baseDir/data/assets/music-link-vincentzyu-fork`，优先使用 Gitee release，失败后自动 fallback 到 GitHub release，并校验 sha256。校验失败会直接报错，不会继续使用损坏资源。
+
 如果网络不稳定或自动下载失败，可以手动下载资源文件：
 
 **资源文件下载链接：**
 - **字体文件：**
-  - [LXGWWenKaiMono-Regular.ttf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/fonts/LXGWWenKaiMono-Regular.ttf)
-  - [SourceHanSerifSC-Medium.otf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/fonts/SourceHanSerifSC-Medium.otf)
+  - [LXGWWenKaiMono-Regular.ttf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/assets/LXGWWenKaiMono-Regular.ttf)
+  - [SourceHanSerifSC-Medium.otf](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/assets/SourceHanSerifSC-Medium.otf)
 
 - **背景图片：**
-  - [mahiro_mihari.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/bg/mahiro_mihari.png)
-  - [pixai_koishi.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/bg_koishi/pixai_koishi.png)
+  - [mahiro_mihari.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/assets/mahiro_mihari.png)
+  - [pixai_koishi.png](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/assets/pixai_koishi.png)
 
 **📥 手动下载步骤：**
 1. 📥 点击上述链接下载资源文件
-2. 📂 将所有文件放入 `assets` 文件夹（`assets` 文件夹与 `lib` 文件夹、`package.json` 文件位于同级目录中）
-3. 🔄 重启本插件，让插件重新执行一遍 `validateAssets()`
+2. 📂 将所有文件放入 `Koishi 根目录/data/assets/music-link-vincentzyu-fork`
+3. 🔄 重启本插件，让插件重新执行一遍资源校验
 
 ---
 
