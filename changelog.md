@@ -2,6 +2,13 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.10.3-rc.5+20260715** 📦
+  - 🚀 **npm 发布内容精简**
+    - `package.json` 版本从 `1.10.3-rc.4+20260715` 升级到 `1.10.3-rc.5+20260715`
+    - 从 npm `files` 发布清单中移除 `test`，仅显式保留 `lib` 与 `dist`
+    - 自动测试脚本、测试数据和测试说明不再随 npm 包发布，减小生产安装包的非运行时内容
+    - `test` 目录仍完整保留在 Git 仓库中，继续用于本地开发与回归验证
+
 - **1.10.3-rc.4+20260715** 🧱
   - 🗂️ **命令与渲染模块重新分层**
     - 新增 `lib/command/`，将网易云和落月 API 指令分别迁移为 `command6_netease.js`、`command9_luoyue.js`

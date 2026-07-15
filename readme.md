@@ -114,7 +114,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### ⚠️ 重要：首次启动说明
 
-插件首次启动时，会自动从 Gitee Realase 下载所需的资源文件（字体和背景图片），**下载完成后才会注册指令和启动中间件**。
+插件首次启动时，会自动从 Gitee / GitHub Release 下载所需的资源文件（字体和背景图片），**下载完成后才会注册指令和启动中间件**。
 
 #### 📢 Koishi WebUI 通知功能
 
