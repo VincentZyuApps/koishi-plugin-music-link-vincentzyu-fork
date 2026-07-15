@@ -1,6 +1,6 @@
 # QQ RichUI 音乐卡片测试
 
-本目录用于测试 `lib/qq/qq-richui.js` 的卡片构建、Markdown 编码和 QQ 内部 API 调用逻辑喵。
+本目录用于测试 `lib/qq/richui.js` 的卡片构建、Markdown 编码和 QQ 内部 API 调用逻辑喵。
 
 ## 环境要求
 
