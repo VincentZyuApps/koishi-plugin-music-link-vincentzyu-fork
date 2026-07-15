@@ -2,6 +2,86 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.10.3-rc.4+20260715** 🧱
+  - 🗂️ **命令与渲染模块重新分层**
+    - 新增 `lib/command/`，将网易云和落月 API 指令分别迁移为 `command6_netease.js`、`command9_luoyue.js`
+    - 新增 `lib/render/`，统一收纳 Canvas、Puppeteer、QQ Markdown、SVG、文本渲染器和渲染编排入口
+    - 根目录保留 `command.js`、`render.js` 薄门面，集中导出内部实现，方便入口引用和后续继续拆分
+  - 🧰 **通用工具按职责拆分**
+    - 将原 `utils.js` 拆分为 `util/assets.js`、`util/api.js`、`util/file.js` 和 `util/download.js`
+    - 新增根目录 `util.js` 作为统一导出门面
+    - 移除聚合多种平台能力的 `createUtilFunctions()`，改用独立的 `createDownloadUtils()` 与 `createQqFileUtils()` 初始化器
+  - 🐧 **平台专属能力归档**
+    - QQ RichUI 模块重命名为 `qq/richui.js`
+    - QQ crack / 官方适配器文件上传与发送逻辑迁移到 `qq/file.js`
+    - 新增 `onebot/card.js`，集中处理 OneBot 音乐卡片构建、群聊发送与私聊发送
+  - ⚙️ **默认值与能力说明修正**
+    - `command6`、`command9` 的 OneBot 音乐卡片与 QQ RichUI 卡片开关统一默认开启
+    - OneBot 音乐卡片说明收敛为仅支持 `onebot`；合并转发说明明确为支持 `onebot` / `red`
+    - 移除尚未实现的 Milky、Satori 音乐卡片兼容说明
+  - 🧪 **兼容性验证**
+    - 更新 QQ RichUI 测试与文档引用路径，保留现有卡片行为
+    - 完成插件入口、门面导出、QQ 文件发送、OneBot 平台门禁及全部 `lib` JavaScript 语法检查
+
+- **1.10.3-rc.3+20260715** 🗃️
+  - 🐧 **QQ 专属模块整理**
+    - 新增 `lib/qq/` 目录并将 RichUI 实现移入，为 QQ 平台独立消息能力预留统一位置
+    - 同步更新插件入口、RichUI 测试脚本和测试文档中的模块路径
+  - 🖼️ **预览资源语义化**
+    - 将 Discord 歌单、OneBot 合并转发与音乐卡片、QQ 官 Bot 文件效果图改为更明确的文件名
+    - README 预览图改用仓库相对路径，并同步完善图片替代文本
+    - 更新 `songlist-latest` 调试日志快照
+
+- **1.10.3-rc.2+20260715** 🎴
+  - ✨ **QQ RichUI 音乐卡片**
+    - 基于 `FlashTransfer/flash` 客户端 RichUI 布局生成原始 Markdown 卡片
+    - 支持网易云音乐、QQ 音乐和酷狗音乐的封面、标题、歌手、专辑、平台图标与分享底栏
+    - 点击卡片优先跳转歌曲详情页，无法构造详情页时回退到音频直链
+  - 🔌 **QQ 适配器兼容**
+    - 通过 QQ 内部 `sendMessage` / `sendPrivateMessage` 接口发送 `msg_type=2` 原始 Markdown
+    - 兼容 `koishi-plugin-adapter-qq-crack` 与官方 Satori QQ 适配器
+    - 补充被动回复所需的 `msg_id` / `msg_seq`，发送失败时保留原有歌曲字段响应
+  - ⚙️ **指令与配置接入**
+    - 新增 `command6_AddQqRichuiCard`、`command9_AddQqRichuiCard` 实验配置
+    - RichUI 卡片接入 command6 / command9 的 ID 点歌和搜索选歌流程，并在普通歌曲字段之前独立发送
+    - command6 补充专辑名称，command9 根据歌曲实际来源平台构造对应卡片
+  - 🧪 **测试与预览**
+    - 新增 QQ RichUI 自动测试与使用文档，覆盖三平台字段、mqqapi 编解码、群私聊发送和平台门禁
+    - 预览图片迁移到 `doc/images/preview/`，新增 QQ RichUI 卡片与文件发送效果图
+    - 修正 Puppeteer 可选对等依赖名称为 `koishi-plugin-puppeteer`
+
+- **1.10.2-rc.1+20260703** 🧪
+  - ⚙️ **实验配置标记**
+    - 将 `strictOrderMode` 标记为实验项，保留默认开启状态与原有严格顺序行为
+  - 📦 **包元数据精简**
+    - 移除未继续使用的 `typings` 字段
+    - 清理重复或过细的关键词，保留更通用的音乐下载标签
+
+- **1.10.2-beta.10+20260623** 📦
+  - 📁 **运行时资源目录**
+    - 字体与背景图片改为存放在 `ctx.baseDir/data/assets/music-link-vincentzyu-fork`
+    - 默认配置仍展示 `process.cwd()/data/assets` 路径，插件启动时自动映射到实际运行目录
+    - 移除插件包内 `assets/.gitkeep`，并在 `.gitignore` 中忽略旧资源目录
+  - 🌐 **资源下载与完整性校验**
+    - 优先从 Gitee Release 下载资源，失败时回退到 GitHub Release
+    - 下载文件和已有文件均校验大小与 SHA256，损坏资源会重新下载，双源失败时明确报错
+  - 🔔 **文档与可选服务**
+    - 更新 README、usage 和开发文档中的资源下载说明
+    - notifier 改为通过 `ctx.inject` 注册可选通知副作用
+    - 更新 `songlist-latest` 调试日志快照
+
+- **1.10.1-beta.9+20260623** 🎼
+  - 🎤 **歌词请求容错增强**
+    - 酷狗歌词支持 `lyric_id + accesskey` 与 `hash + album_audio_id + keyword` 两套参数链路
+    - 歌曲详情返回的歌词标识会继续透传到歌词请求，增强酷狗回源成功率
+  - 🌐 **落月 API 请求统一**
+    - command9 请求统一收敛到 `smartApiGet()`
+    - 增加 QQ 音乐搜索缓存响应头观测，详细日志开启时可查看缓存命中状态
+  - 🪵 **调试日志降噪**
+    - 拆分 `verboseConsoleLog` 与 `verboseFileLog` 语义
+    - 控制台只输出歌单长度与短预览，完整数据写入 `log/songlist-latest.json`
+    - 优化文件名斜杠替换选项和调试配置说明
+
 - **1.10.0-beta.8+20260623** 🖼️
   - 🎨 默认开启 `markdown_style` 渲染模式
   - 🏷️ NOTICE.md 字体来源 badge 统一为 `Font Source`
