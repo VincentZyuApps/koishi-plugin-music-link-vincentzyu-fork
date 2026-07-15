@@ -50,7 +50,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 >
 
 ![songlist_example_svg.png](doc/images/preview/songlist_example_svg.png)
-![discord_example.png](doc/images/preview/discord_example.png)
+![Discord 歌单效果预览](doc/images/preview/discord_example_songlist.png)
 
 
 ### 🖌️ Puppeteer 渲染模式（传统方式）
@@ -69,7 +69,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 ![songlist_example_source.png](doc/images/preview/songlist_example_source.png)
 ![songlist_example_flat.png](doc/images/preview/songlist_example_flat.png)
 ![songlist_example_blurglass_lxgw_mahiro.png](doc/images/preview/songlist_example_blurglass_lxgw_mahiro.png)
-![onebot_example.png](doc/images/preview/onebot_example.png)
+![OneBot 合并转发、音频与音乐卡片效果预览](doc/images/preview/onebot_example_forward_figure_audio_music_card.png)
 
 ### 💬 QQ Markdown 渲染模式（v1.9.6+ 新增）
 
@@ -87,7 +87,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 > 📤 ** QQ 平台图文 / 语音 / 文件发送效果 ** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
 
-![qq_example.png](doc/images/preview/qq_example.png)
+![QQ 官 Bot 文件、封面、歌曲信息、下载链接与音质效果预览](doc/images/preview/qq_example_file_cover_name_id_artist_download_url_quality.png)
 ![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_2_richui_card_file.png)
 
 -----
