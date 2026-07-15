@@ -37,7 +37,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 > - 🔤 **支持自定义字体**：可加载 `LXGW WenKai Mono` 等字体用于中文歌单渲染
 >
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_canvas.png](doc/preview-images/songlist_example_canvas.png)
+![songlist_example_canvas.png](doc/images/preview/songlist_example_canvas.png)
 
 ### 🎨 SVG 渲染模式 (v1.9.0+ 新增)
 
@@ -49,8 +49,8 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 > - 🔧 **易于部署**：无需配置 Puppeteer 服务，开箱即用
 >
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_svg.png](doc/preview-images/songlist_example_svg.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/discord_example.png](doc/preview-images/discord_example.png)
+![songlist_example_svg.png](doc/images/preview/songlist_example_svg.png)
+![discord_example.png](doc/images/preview/discord_example.png)
 
 
 ### 🖌️ Puppeteer 渲染模式（传统方式）
@@ -66,10 +66,10 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 > - 内存资源充裕的机器可以选择此模式
 > - 建议配置 Swap 以避免浏览器爆内存：[配置 Swap 指南](https://vincentzyu233.github.io/VincentZyu233/notes/system-config/swap.html)
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_source.png](doc/preview-images/songlist_example_source.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_flat.png](doc/preview-images/songlist_example_flat.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_blurglass_lxgw_mahiro.png](doc/preview-images/songlist_example_blurglass_lxgw_mahiro.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/onebot_example.png](doc/preview-images/onebot_example.png)
+![songlist_example_source.png](doc/images/preview/songlist_example_source.png)
+![songlist_example_flat.png](doc/images/preview/songlist_example_flat.png)
+![songlist_example_blurglass_lxgw_mahiro.png](doc/images/preview/songlist_example_blurglass_lxgw_mahiro.png)
+![onebot_example.png](doc/images/preview/onebot_example.png)
 
 ### 💬 QQ Markdown 渲染模式（v1.9.6+ 新增）
 
@@ -80,14 +80,15 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 > - 💡 **交互友好**：清晰的退出提示和选择指南
 > - 🎨 **格式美观**：结构化布局，易于阅读
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_table.png](doc/preview-images/songlist_example_qq_markdown_table.png)
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/songlist_example_qq_markdown_style.png](doc/preview-images/songlist_example_qq_markdown_style.png)
+![songlist_example_qq_markdown_table.png](doc/images/preview/songlist_example_qq_markdown_table.png)
+![songlist_example_qq_markdown_style.png](doc/images/preview/songlist_example_qq_markdown_style.png)
 
 ### 🐧 QQ 官 Bot 效果预览
 
 > 📤 ** QQ 平台图文 / 语音 / 文件发送效果 ** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/qq_example.png](doc/preview-images/qq_example.png)
+![qq_example.png](doc/images/preview/qq_example.png)
+![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_2_richui_card_file.png)
 
 -----
 
@@ -119,7 +120,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 插件启动时会在 Koishi WebUI 中显示配置信息和资源文件下载状态，方便用户了解插件运行情况。
 
-![https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork/releases/download/example_image/koishi_console_webui_plugin_setting_notifier_preview.png](doc/preview-images/koishi_console_webui_plugin_setting_notifier_preview.png)
+![koishi_console_webui_plugin_setting_notifier_preview.png](doc/images/preview/koishi_console_webui_plugin_setting_notifier_preview.png)
 
 首次启动会自动下载资源到 `ctx.baseDir/data/assets/music-link-vincentzyu-fork`，优先使用 Gitee release，失败后自动 fallback 到 GitHub release，并校验 sha256。校验失败会直接报错，不会继续使用损坏资源。
 
