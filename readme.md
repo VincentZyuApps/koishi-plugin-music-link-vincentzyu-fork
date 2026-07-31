@@ -180,7 +180,8 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 **后端选择：**
 - **`api.vkeys.cn/v2`** (落月api官方)
-  - ✅ 支持**网易云 + QQ音乐 + 酷狗音乐**
+  - ✅ 支持**网易云 + QQ音乐**
+  - ⚠️ 当前不支持酷狗音乐
   - ✅ 支持多音质选择（标准音质 - Master/Hi-Res）
   - ✅ 支持按所选平台聚合搜索（多选即聚合）
   - 🎯 **网易云最高支持：超清母带 (Master)**
@@ -191,6 +192,13 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
   - ✅ 是官方 `v2` API 的超集，兼容官方现有能力
   - ✅ 额外增加了酷狗音乐 API 等扩展能力
   - ⚠️ 如果挂了可以去QQ群：`1085190201` 艾特作者 `@VincentZyu`
+
+| API | 网易云 | QQ 音乐 | 酷狗 |
+| --- | --- | --- | --- |
+| `https://api.vkeys.cn` | 支持 | 支持 | 当前不支持 |
+| `http://xwl.vincentzyu233.cn:51217` | 支持 | 支持 | 支持 |
+
+自建 API 如果不可用，可在 QQ 群 `1085190201` 联系 `@VincentZyu`。
 
 **当前 `command9` 聚合搜索说明：**
 
