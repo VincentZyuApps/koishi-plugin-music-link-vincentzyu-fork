@@ -6,7 +6,7 @@ const {
     buildQqRichuiMarkdown,
     normalizeSongData,
     sendQqRichuiCard,
-} = require('../../lib/qq/richui');
+} = require('../../lib/platform/qq/richui');
 
 function getCardFields(card) {
     const file = card.attributes.attributes.find(item => item.viewId === 'file');

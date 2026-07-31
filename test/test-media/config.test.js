@@ -8,6 +8,29 @@ const {
     QUALITY_PROFILES,
     getQualityCandidates,
 } = require('../../lib/util/quality');
+const { TELEGRAM_CAPTION_MODES } = require('../../lib/platform/telegram/send');
+
+test('separates Telegram lyrics by default for command6 and command9', () => {
+    const command6Config = Config({ serverSelect: 'command6' });
+    const command9Config = Config({ serverSelect: 'command9' });
+
+    assert.equal(command6Config.command6_telegramCaptionMode, TELEGRAM_CAPTION_MODES.SEPARATE_LYRICS);
+    assert.equal(command9Config.command9_telegramCaptionMode, TELEGRAM_CAPTION_MODES.SEPARATE_LYRICS);
+});
+
+test('preserves independently selected Telegram caption modes', () => {
+    const command6Config = Config({
+        serverSelect: 'command6',
+        command6_telegramCaptionMode: TELEGRAM_CAPTION_MODES.LEGACY,
+    });
+    const command9Config = Config({
+        serverSelect: 'command9',
+        command9_telegramCaptionMode: TELEGRAM_CAPTION_MODES.SEPARATE_IMAGE,
+    });
+
+    assert.equal(command6Config.command6_telegramCaptionMode, TELEGRAM_CAPTION_MODES.LEGACY);
+    assert.equal(command9Config.command9_telegramCaptionMode, TELEGRAM_CAPTION_MODES.SEPARATE_IMAGE);
+});
 
 test('enables command9 automatic quality downgrade by default', () => {
     const config = Config({ serverSelect: 'command9' });

@@ -38,6 +38,7 @@ test('command9 resolves an unavailable initial quality before sending fields', a
         command9_QQMusicQuality: 14,
         command9_KugouMusicQuality: 'high',
         command9_AutoDowngradeQuality: true,
+        command9_telegramCaptionMode: 'separate-image',
         command9_AddQqRichuiCard: false,
         command9_AddOnebotMusicCard: false,
         command9_returnDataField: [{ data: 'url', describe: '音频', type: 'audio', enable: true }],
@@ -92,6 +93,8 @@ test('command9 resolves an unavailable initial quality before sending fields', a
     assert.equal(result, '');
     assert.equal(generated[1].url, 'https://media.test/surround.flac');
     assert.deepEqual(generated[4].qualityFallback.candidates, [8, 7, 6, 5, 4, 3, 2, 1]);
+    assert.equal(generated[4].telegramCaptionMode, 'separate-image');
+    assert.equal(generated[4].telegramCaptionConfigKey, 'command9_telegramCaptionMode');
     assert.equal(generated[4].qualityFallback.initialDowngradeFrom, 9);
     assert.equal(calls.some((requestUrl) => requestUrl.includes('quality=9') && !requestUrl.includes('word=')), true);
     assert.equal(calls.some((requestUrl) => requestUrl.includes('quality=8')), true);

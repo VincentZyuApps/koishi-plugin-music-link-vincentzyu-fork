@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { createQqFileUtils } = require('../../lib/qq/file');
+const { createQqFileUtils } = require('../../lib/platform/qq/file');
 
 test('returns the QQ official message id for downgrade notices', async () => {
     const utils = createQqFileUtils({ logInfo: () => {} });

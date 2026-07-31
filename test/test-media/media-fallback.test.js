@@ -11,6 +11,12 @@ const {
     sendMediaWithFallback,
     splitTextByLength,
 } = require('../../lib/util/media');
+const {
+    TELEGRAM_CAPTION_MODES,
+    TELEGRAM_TEXT_CHUNK_LENGTH,
+    createTelegramSafePlan,
+    trySendTelegramSafeItems,
+} = require('../../lib/platform/telegram/send');
 
 function tooLargeError() {
     const error = new Error('Telegram API error 413. Request Entity Too Large');
@@ -256,4 +262,99 @@ test('does not turn successful media into a failure when the notice fails', asyn
 test('splits long lyrics on line boundaries', () => {
     const chunks = splitTextByLength('12345\n67890\nabcde', 11);
     assert.deepEqual(chunks, ['12345\n67890', 'abcde']);
+});
+
+function createTelegramItems(lyric = 'test lyric') {
+    return [
+        { type: 'image', field: { data: 'pic', describe: '封面' } },
+        { type: 'text', field: { data: 'name', describe: '歌曲名称', value: 'Test Song' } },
+        { type: 'text', field: { data: 'lrc', describe: '歌词', value: lyric } },
+    ];
+}
+
+function formatTelegramTestText(item) {
+    return `${item.field.describe}：${item.field.value}`;
+}
+
+test('keeps the legacy Telegram image and text batch unchanged', () => {
+    const items = createTelegramItems();
+    assert.deepEqual(createTelegramSafePlan(items, TELEGRAM_CAPTION_MODES.LEGACY), [
+        { type: 'batch', items },
+    ]);
+});
+
+test('separates lyrics from the Telegram image caption and chunks them at 3333 characters', async () => {
+    const items = createTelegramItems('x'.repeat(TELEGRAM_TEXT_CHUNK_LENGTH + 100));
+    const batches = [];
+    const textChunks = [];
+
+    await trySendTelegramSafeItems({
+        session: {
+            platform: 'telegram',
+            send: async (payload) => {
+                if (typeof payload === 'string') batches.push(payload);
+                else textChunks.push(payload.attrs.content);
+                return ['message'];
+            },
+        },
+        logger: { warn: () => {} },
+        safeItems: items,
+        mode: TELEGRAM_CAPTION_MODES.SEPARATE_LYRICS,
+        formatText: formatTelegramTestText,
+        createSafeElement: (item) => item.type === 'image' ? '<image/>' : formatTelegramTestText(item),
+    });
+
+    assert.equal(batches[0], '<image/>\n歌曲名称：Test Song');
+    assert.equal(textChunks.length, 2);
+    assert.equal(textChunks[0].length, TELEGRAM_TEXT_CHUNK_LENGTH);
+    assert.equal(textChunks[0].startsWith('歌词：'), true);
+    assert.equal(textChunks[1].startsWith('歌词：'), false);
+});
+
+test('sends Telegram images independently and combines all text in separate-image mode', async () => {
+    const items = createTelegramItems('short lyric');
+    const calls = [];
+
+    await trySendTelegramSafeItems({
+        session: {
+            platform: 'telegram',
+            send: async (payload) => {
+                calls.push([typeof payload === 'string' ? 'image' : 'text', payload]);
+                return ['message'];
+            },
+        },
+        logger: { warn: () => {} },
+        safeItems: items,
+        mode: TELEGRAM_CAPTION_MODES.SEPARATE_IMAGE,
+        formatText: formatTelegramTestText,
+        createSafeElement: (item) => item.type === 'image' ? '<image/>' : formatTelegramTestText(item),
+    });
+
+    assert.equal(calls[0][0], 'image');
+    assert.equal(calls[0][1], '<image/>');
+    assert.equal(calls[1][0], 'text');
+    assert.equal(calls[1][1].attrs.content, '歌曲名称：Test Song\n歌词：short lyric');
+});
+
+test('reports an empty Telegram send result without changing the selected strategy', async () => {
+    const items = createTelegramItems();
+    const warnings = [];
+    let batchAttempts = 0;
+
+    await trySendTelegramSafeItems({
+        session: {
+            platform: 'telegram',
+            send: async () => { batchAttempts++; return []; },
+        },
+        logger: { warn: (message) => { warnings.push(message); } },
+        safeItems: items,
+        mode: TELEGRAM_CAPTION_MODES.LEGACY,
+        formatText: formatTelegramTestText,
+        createSafeElement: (item) => item.type === 'image' ? '<image/>' : formatTelegramTestText(item),
+    });
+
+    assert.equal(batchAttempts, 1);
+    assert.equal(warnings.length, 1);
+    assert.match(warnings[0], /command\*_telegramCaptionMode/);
+    assert.match(warnings[0], /图片单独发送/);
 });
