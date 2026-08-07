@@ -2,6 +2,27 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.12.0-beta.5+20260801** 🪵
+  - 🧭 **两档日志模型**
+    - 全部生产日志统一收口到实例级 `logInfo()` 与 `logDebug()`，底层只使用 `ctx.logger.info()`
+    - 常驻日志统一采用 `[🎵 INFO] <语义 emoji> <主题>`，详细日志统一采用 `[🐛 DEBUG] <语义 emoji> <主题>`
+    - `verboseConsoleLog` 只控制 API、payload、响应、路径、计时和 Stack trace 等详细诊断，业务结果与错误摘要始终保留
+  - 🧹 **日志入口清理**
+    - 移除模块级 `Logger`、直接 `console.*`、Koishi WARN/ERROR/DEBUG 调用和旧 `loggerinfo` 兼容分支
+    - command6、command9、中间件、下载、资源、渲染及 QQ/OneBot/Telegram 平台模块统一接收实例级 `musicLogger`
+    - 原始对象、逐首聚合、绝对路径和完整失败诊断改为 lazy DEBUG，关闭详细模式时不执行序列化
+  - 🔐 **诊断安全与测试**
+    - 新增 Error、循环引用、BigInt、Headers 与二进制安全格式化，并对 token、Cookie、Secret 等认证字段脱敏
+    - RichUI 失败默认输出短摘要，详细模式补充请求 payload、响应 JSON、业务码、trace ID 和 Stack trace
+    - 新增 logger 单元测试和两档前缀测试，并更新现有命令、Telegram、QQ 文件及 RichUI 测试桩
+  - 📖 **配置文档迁移**
+    - `loggerInfo配置项详解.md` 迁移为 `verboseConsoleLog配置项详解.md`，补充两档日志、语义 emoji、lazy data 和安全规则
+    - `verboseFileLog` 继续只控制 `log/songlist-latest.json`，不向控制台倾倒完整歌单
+  - 🗂️ **目录入口统一**
+    - `util`、`command` 与 `render` 统一使用各自目录下的 `index.js`，移除根目录同名聚合或转发文件
+    - `media.js` 不再重复转导出 quality 函数，质量候选与名称格式化统一由 `quality.js` 提供
+    - 新增目录入口解析与工具导出冲突测试；无扩展名的内部 `require()` 路径保持不变
+
 - **1.10.3-rc.5+20260715** 📦
   - 🚀 **npm 发布内容精简**
     - `package.json` 版本从 `1.10.3-rc.4+20260715` 升级到 `1.10.3-rc.5+20260715`
@@ -222,7 +243,7 @@
     - 默认启用 `music`，默认禁用 `news`
     - 新增 `enableWhitelist` 与 `customWhitelist` 配置项
   - ⚙️ **交互与配置增强**
-    - 新增 `used_id` 配置项，用于指定歌单默认选择序号
+    - 新增 `middlewareDefaultSongIndex` 配置项，用于指定歌单默认选择序号
     - QQ Markdown 模式新增 `renderInfo` 信息展示
   - 🔧 **架构调整**
     - 重构渲染架构，新增 `lib/renderer-text.js`

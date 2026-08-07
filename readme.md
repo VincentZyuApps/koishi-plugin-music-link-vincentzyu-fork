@@ -4,13 +4,13 @@
 
 # koishi-plugin-music-link-vincentzyu-fork
 
-[![npm](https://img.shields.io/npm/v/koishi-plugin-music-link-vincentzyu-fork?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
-[![npm-download](https://img.shields.io/npm/dm/koishi-plugin-music-link-vincentzyu-fork?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
+[![npm](https://img.shields.io/npm/v/koishi-plugin-music-link-vincentzyu-fork?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
+[![npm-download](https://img.shields.io/npm/dm/koishi-plugin-music-link-vincentzyu-fork?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/package/koishi-plugin-music-link-vincentzyu-fork)
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork)
 [![Gitee](https://img.shields.io/badge/Gitee-C71D23?style=for-the-badge&logo=gitee&logoColor=white)](https://gitee.com/vincent-zyu/koishi-plugin-music-link-vincentzyu-fork)
 
-[![Koishi Forum](https://img.shields.io/badge/koishi.forum.xyz_topic_12120-5546A3?style=for-the-badge&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff3%2FKoishi.js_Logo.png&logoColor=white)](https://forum.koishi.xyz/t/topic/12120)
+[![Koishi Forum](https://img.shields.io/badge/Koishi%20Forum-12120-5546A3?style=for-the-badge&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABU0lEQVR42p2UQSsFYRSGnxnqLuytKWKpKFkQNsS%2FsOHPWPADLCmxU5S7UzYWNrJR7lYiRF2FeWzOMKZ7mXHqNNP5vvP2nu%2B850CY2lP4X1K31ZbaDm%2BpO%2Bpyp5wfAXVEPfRvO1JHf4AVQGbUh7j4EZ4VkrNCXPVRnf3CUBN1SH2KC28VGOV3ntRhNclZHdcAKYM11QR1oVBOXctzFlNgBTC8qmXxPQEegbVeYApIgJT6tg%2F0AdMp0B%2FBpCabK2AAmAAa%2F2GRBft1oBFPkqTAba7LCiAfQC9wClwAY1HJHepuiO29Yrsf1Dn1uiDU3RTYCtTkl1Leg8k9MB4NGgReI28rV3azgyCz0og01Xl1Uz1QX8uCTELm3UbkTF1VJ9Wr0tn3iBSGdjYG0XivE3VN3VD31PM4a3cc2tIGGI0VkTO7rLxGuiy25ejmjfqsvkSXui62TxaK03td4FXTAAAAAElFTkSuQmCC&logoColor=white)](https://forum.koishi.xyz/t/topic/12120)
 
 [![QQ群](https://img.shields.io/badge/QQ群-1085190201-12B7F5?style=flat-square&logo=qq&logoColor=white)](https://qm.qq.com/q/4vjto4V7Di)
 

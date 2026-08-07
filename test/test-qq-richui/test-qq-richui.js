@@ -4,9 +4,16 @@ const assert = require('node:assert/strict');
 const {
     buildQqRichuiCard,
     buildQqRichuiMarkdown,
+    formatQqErrorForLog,
     normalizeSongData,
     sendQqRichuiCard,
 } = require('../../lib/platform/qq/richui');
+const { createMusicLogger } = require('../../lib/util/logger');
+
+const silentMusicLogger = {
+    logInfo() {},
+    logDebug() {},
+};
 
 function getCardFields(card) {
     const file = card.attributes.attributes.find(item => item.viewId === 'file');
@@ -75,7 +82,7 @@ async function main() {
             },
         },
     };
-    assert.equal(await sendQqRichuiCard(groupSession, { id: 1, name: '测试' }, 'netease', { info() {}, warn() {} }), true);
+    assert.equal(await sendQqRichuiCard(groupSession, { id: 1, name: '测试' }, 'netease', silentMusicLogger), true);
     assert.equal(groupCall[0], 'group-openid');
     assert.equal(groupCall[1].msg_type, 2);
     assert.equal(groupCall[1].msg_id, 'message-id');
@@ -93,9 +100,53 @@ async function main() {
             },
         },
     };
-    assert.equal(await sendQqRichuiCard(privateSession, { url: 'https://example.com/audio.mp3' }, 'unknown', { info() {}, warn() {} }), true);
+    assert.equal(await sendQqRichuiCard(privateSession, { url: 'https://example.com/audio.mp3' }, 'unknown', silentMusicLogger), true);
     assert.equal(privateCall[0], 'user-openid');
     assert.equal(privateCall[1].markdown.content.startsWith('[音乐分享](mqqapi://'), true);
+
+    const qqError = new Error('Bad Request');
+    qqError.response = {
+        status: 400,
+        statusText: 'Bad Request',
+        url: 'https://api.sgroup.qq.com/v2/groups/group-openid/messages',
+        data: {
+            code: 40034028,
+            message: '请求参数不允许包含 url',
+            trace_id: 'trace-from-body',
+        },
+        headers: new Headers({ 'x-tps-trace-id': 'trace-from-header' }),
+    };
+    const diagnostics = formatQqErrorForLog(qqError, { payload: { msg_type: 2 } });
+    assert.match(diagnostics, /QQ 业务码: 40034028/);
+    assert.match(diagnostics, /QQ trace_id: trace-from-body/);
+    assert.match(diagnostics, /"msg_type": 2/);
+    assert.match(diagnostics, /Error: Bad Request/);
+
+    const failureLogs = [];
+    const failureSession = {
+        ...groupSession,
+        bot: {
+            internal: {
+                sendMessage: async () => { throw qqError; },
+            },
+        },
+    };
+    const failureLogger = createMusicLogger({
+        logger: { info(message) { failureLogs.push(message); } },
+    }, { verboseConsoleLog: true });
+    assert.equal(await sendQqRichuiCard(failureSession, { id: 1, name: '失败测试' }, 'netease', failureLogger), false);
+    assert.equal(failureLogs.some(message => message.includes('[🎵 INFO] ⚠️ QQ RichUI 音乐卡片发送失败')), true);
+    assert.equal(failureLogs.some(message => message.includes('[🐛 DEBUG] 💥 QQ RichUI 失败诊断')), true);
+    assert.equal(failureLogs.some(message => message.includes('40034028')), true);
+
+    const quietFailureLogs = [];
+    const quietFailureLogger = createMusicLogger({
+        logger: { info(message) { quietFailureLogs.push(message); } },
+    }, { verboseConsoleLog: false });
+    assert.equal(await sendQqRichuiCard(failureSession, { id: 1, name: '默认档失败测试' }, 'netease', quietFailureLogger), false);
+    assert.equal(quietFailureLogs.length, 1);
+    assert.match(quietFailureLogs[0], /^\[🎵 INFO\] ⚠️ QQ RichUI 音乐卡片发送失败/);
+    assert.doesNotMatch(quietFailureLogs[0], /Stack trace|"request"|"response"/);
 
     const nonQqSession = { platform: 'onebot' };
     assert.equal(await sendQqRichuiCard(nonQqSession, {}, 'netease'), false);

@@ -3,14 +3,16 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const {
-    getQualityCandidates,
-    getQualityLabel,
     isQualityRelatedMediaError,
     isTerminalMediaError,
     createQualityFallbackState,
     sendMediaWithFallback,
     splitTextByLength,
 } = require('../../lib/util/media');
+const {
+    getQualityCandidates,
+    getQualityLabel,
+} = require('../../lib/util/quality');
 const {
     TELEGRAM_CAPTION_MODES,
     TELEGRAM_TEXT_CHUNK_LENGTH,
@@ -297,7 +299,7 @@ test('separates lyrics from the Telegram image caption and chunks them at 3333 c
                 return ['message'];
             },
         },
-        logger: { warn: () => {} },
+        musicLogger: { logInfo: () => {}, logDebug: () => {} },
         safeItems: items,
         mode: TELEGRAM_CAPTION_MODES.SEPARATE_LYRICS,
         formatText: formatTelegramTestText,
@@ -323,7 +325,7 @@ test('sends Telegram images independently and combines all text in separate-imag
                 return ['message'];
             },
         },
-        logger: { warn: () => {} },
+        musicLogger: { logInfo: () => {}, logDebug: () => {} },
         safeItems: items,
         mode: TELEGRAM_CAPTION_MODES.SEPARATE_IMAGE,
         formatText: formatTelegramTestText,
@@ -346,7 +348,7 @@ test('reports an empty Telegram send result without changing the selected strate
             platform: 'telegram',
             send: async () => { batchAttempts++; return []; },
         },
-        logger: { warn: (message) => { warnings.push(message); } },
+        musicLogger: { logInfo: (message) => { warnings.push(message); }, logDebug: () => {} },
         safeItems: items,
         mode: TELEGRAM_CAPTION_MODES.LEGACY,
         formatText: formatTelegramTestText,

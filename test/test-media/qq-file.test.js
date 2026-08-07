@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const { createQqFileUtils } = require('../../lib/platform/qq/file');
 
 test('returns the QQ official message id for downgrade notices', async () => {
-    const utils = createQqFileUtils({ logInfo: () => {} });
+    const utils = createQqFileUtils({ logInfo: () => {}, logDebug: () => {} });
     const session = {
         isDirect: false,
         channelId: 'channel-1',
@@ -30,7 +30,7 @@ test('returns the QQ official message id for downgrade notices', async () => {
 });
 
 test('keeps crack adapter file sending as an h.file element', async () => {
-    const utils = createQqFileUtils({ logInfo: () => {} });
+    const utils = createQqFileUtils({ logInfo: () => {}, logDebug: () => {} });
     const session = { bot: { config: { useMarkdownIfAt: true } } };
     const result = await utils.sendQQFile(null, session, 'https://example.test/song.mp3', 'song.mp3');
 
