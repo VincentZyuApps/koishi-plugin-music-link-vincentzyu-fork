@@ -188,7 +188,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
   - 🎯 **QQ音乐最高支持：臻品母带2.0**
   - 🎯 **酷狗最高支持：Hi-Res / SQ无损 / HQ高品质 / 标准音质**
 
-- **`http://xwl.vincentzyu233.cn:51217`** (作者自建)
+- **`https://luoyue-api-cf.vincentzyu233.cn`** (作者自建)
   - ✅ 是官方 `v2` API 的超集，兼容官方现有能力
   - ✅ 额外增加了酷狗音乐 API 等扩展能力
   - ⚠️ 如果挂了可以去QQ群：`1085190201` 艾特作者 `@VincentZyu`
@@ -196,7 +196,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 | API | 网易云 | QQ 音乐 | 酷狗 |
 | --- | --- | --- | --- |
 | `https://api.vkeys.cn` | 支持 | 支持 | 当前不支持 |
-| `http://xwl.vincentzyu233.cn:51217` | 支持 | 支持 | 支持 |
+| `https://luoyue-api-cf.vincentzyu233.cn` | 支持 | 支持 | 支持 |
 
 自建 API 如果不可用，可在 QQ 群 `1085190201` 联系 `@VincentZyu`。
 
