@@ -2,7 +2,7 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
-- **1.13.0-beta.1+20261031** 🎴
+- **1.13.0-rc.1+20261031** 🎴
   - ✨ **QQ 官 Bot 原生图文大卡片 (msg_type: 8)**
     - 新增 `lib/platform/qq/tuwen.js`，基于 QQ 开放平台最新的原生图文卡片协议（`msg_type: 8`，`card.type: 'tuwen'`）生成结构化卡片
     - 完整支持网易云音乐、QQ 音乐、酷狗音乐等各平台的歌曲封面、歌曲标题（限制 50 字符）、歌手/专辑/音质摘要（限制 200 字符）以及跳转外链
@@ -18,7 +18,7 @@
   - 🧪 **测试覆盖与效果图更新**
     - 新增 `test/test-qq-tuwen.test.js` 自动化单元测试，全量覆盖 payload 构建、URL 清洗、bot.internal 发送流程及跨平台门禁
     - 引入真机测试效果预览图 `doc/images/preview/qq_example_tuwen_card.png`，并规范化历史预览图命名
-    - 更新 `readme.md` 效果预览章节
+    - 优化 `readme.md` 渲染展示：按历史实现演进顺序规范官 Bot 预览图排版，并修复多处在 GFM 下无法渲染的加粗空格语法
 
 - **1.12.0-beta.5+20260801** 🪵
   - 🧭 **两档日志模型**

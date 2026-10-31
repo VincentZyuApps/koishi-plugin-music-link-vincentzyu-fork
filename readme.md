@@ -29,7 +29,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 🎨 Canvas 渲染模式 (v1.9.11+ 新增)
 
-> ⚡ ** Canvas 渲染 [![Skia](https://img.shields.io/badge/Skia-powered-1f6feb?style=flat-square)](https://github.com/Brooooooklyn/canvas) ** - 基于 `@napi-rs/canvas` / Skia 的轻量高速渲染方案
+> ⚡ **Canvas 渲染** [![Skia](https://img.shields.io/badge/Skia-powered-1f6feb?style=flat-square)](https://github.com/Brooooooklyn/canvas) - 基于 `@napi-rs/canvas` / Skia 的轻量高速渲染方案
 >
 > - 🚀 **渲染很快**：整体出图速度通常明显快于 Puppeteer
 > - 🪶 **更轻量**：不依赖浏览器进程，部署和运行成本更低
@@ -41,7 +41,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 🎨 SVG 渲染模式 (v1.9.0+ 新增)
 
-> ✨ ** resvg 渲染 [![resvg](https://img.shields.io/badge/resvg-powered-orange?style=flat-square&logo=rust)](https://github.com/linebender/resvg)** -  基于 Rust 编写的高性能 SVG 渲染器，不依赖浏览器！
+> ✨ **resvg 渲染** [![resvg](https://img.shields.io/badge/resvg-powered-orange?style=flat-square&logo=rust)](https://github.com/linebender/resvg) - 基于 Rust 编写的高性能 SVG 渲染器，不依赖浏览器！
 >
 > - 🦀 **Rust 驱动**：使用 Rust 编写，内存安全，性能卓越
 > - 💾 **低资源占用**：不依赖浏览器，内存和 CPU 占用极低
@@ -55,7 +55,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 🖌️ Puppeteer 渲染模式（传统方式）
 
-> 🎭 ** Puppeteer 渲染 [![Puppeteer](https://img.shields.io/badge/Puppeteer-powered-blue?style=flat-square&logo=google-chrome)](https://github.com/puppeteer/puppeteer) ** - 基于浏览器的传统渲染方式
+> 🎭 **Puppeteer 渲染** [![Puppeteer](https://img.shields.io/badge/Puppeteer-powered-blue?style=flat-square&logo=google-chrome)](https://github.com/puppeteer/puppeteer) - 基于浏览器的传统渲染方式
 >
 > - 🎨 **样式更加精美**：支持更多复杂样式和特效
 > - 📱 **兼容性更好**：基于标准浏览器渲染，支持更多 CSS 特性
@@ -73,7 +73,7 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 💬 QQ Markdown 渲染模式（v1.9.6+ 新增）
 
-> 💬 ** QQ Markdown 渲染 ** - 专为 QQ 平台优化的 Markdown 格式
+> 💬 **QQ Markdown 渲染** - 专为 QQ 平台优化的 Markdown 格式
 >
 > - 🎯 **仅支持 QQ 平台**：利用 QQ 官方 Markdown 消息能力
 > - 📊 **两种显示风格**：支持表格风格和列表风格
@@ -85,11 +85,11 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 ### 🐧 QQ 官 Bot 效果预览
 
-> 📤 ** QQ 平台图文 / 语音 / 文件发送效果 ** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
+> 📤 **QQ 平台图文卡片 / 语音 / 文件发送效果** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
 
-![QQ 官 Bot 原生图文卡片与文件效果预览](doc/images/preview/qq_example_tuwen_card.png)
 ![QQ 官 Bot 文件、封面、歌曲信息、下载链接与音质效果预览](doc/images/preview/qq_example_file_cover_name_id_artist_download_url_quality.png)
 ![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_richui_card_file.png)
+![QQ 官 Bot 原生图文卡片与文件效果预览](doc/images/preview/qq_example_tuwen_card.png)
 
 -----
 
