@@ -87,8 +87,9 @@ https://github.com/shangxueink/koishi-shangxue-apps/tree/main/plugins/music-link
 
 > 📤 ** QQ 平台图文 / 语音 / 文件发送效果 ** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
 
+![QQ 官 Bot 原生图文卡片与文件效果预览](doc/images/preview/qq_example_tuwen_card.png)
 ![QQ 官 Bot 文件、封面、歌曲信息、下载链接与音质效果预览](doc/images/preview/qq_example_file_cover_name_id_artist_download_url_quality.png)
-![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_2_richui_card_file.png)
+![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_richui_card_file.png)
 
 -----
 

@@ -2,6 +2,24 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.13.0-beta.1+20261031** 🎴
+  - ✨ **QQ 官 Bot 原生图文大卡片 (msg_type: 8)**
+    - 新增 `lib/platform/qq/tuwen.js`，基于 QQ 开放平台最新的原生图文卡片协议（`msg_type: 8`，`card.type: 'tuwen'`）生成结构化卡片
+    - 完整支持网易云音乐、QQ 音乐、酷狗音乐等各平台的歌曲封面、歌曲标题（限制 50 字符）、歌手/专辑/音质摘要（限制 200 字符）以及跳转外链
+    - 针对腾讯 URL 安全规范，自动规范化 HTTPS 直链并剔除前端 hash 锚点（如 `/#/song?id=...` 转为 `/song?id=...`），封面图片强制转为 HTTPS 并提供官方默认封面兜底
+  - 🔌 **底层原生无嗅探直调与双适配器兼容**
+    - 绕开传统消息段编码器在不同适配器之间的元素解析差异，优先直接调用底层 `session.bot.internal.sendMessage`（群聊）与 `session.bot.internal.sendPrivateMessage`（私聊）原生发包接口
+    - 自动装配 5 分钟被动回复窗口凭证（`msg_id` 与自增 `msg_seq`）
+    - 100% 兼容官方 `@satorijs/adapter-qq` 与 `adapter-qq-crack`；在无 internal 场景下自动降级为 `<qq:card>` 虚拟消息段
+    - 细化卡片发送结果日志输出，实时打印腾讯服务端返回的响应 ID 或详细错误摘要
+  - ⚙️ **指令与配置升级**
+    - 新增 `command6_addQqTuwen`（网易云）与 `command9_addQqTuwen`（落月聚合）配置项，默认开启
+    - 针对腾讯已全面封禁的客户端 RichUI 协议（`mqqapi://markdown/node` 报错 `40034028`），在配置项与日志中明确标注其为已失效项并提供图文卡片替代方案
+  - 🧪 **测试覆盖与效果图更新**
+    - 新增 `test/test-qq-tuwen.test.js` 自动化单元测试，全量覆盖 payload 构建、URL 清洗、bot.internal 发送流程及跨平台门禁
+    - 引入真机测试效果预览图 `doc/images/preview/qq_example_tuwen_card.png`，并规范化历史预览图命名
+    - 更新 `readme.md` 效果预览章节
+
 - **1.12.0-beta.5+20260801** 🪵
   - 🧭 **两档日志模型**
     - 全部生产日志统一收口到实例级 `logInfo()` 与 `logDebug()`，底层只使用 `ctx.logger.info()`
