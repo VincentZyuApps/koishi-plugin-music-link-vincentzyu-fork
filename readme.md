@@ -36,9 +36,9 @@
 
 > 📤 **QQ 平台原生图文卡片 / 语音 / 媒体与文件发送链路** - 展示官 QQ Bot 平台下的歌曲列表图片、音频与文件发送链路效果
 
-![QQ 官 Bot 文件、封面、歌曲信息、下载链接与音质效果预览](doc/images/preview/qq_example_file_cover_name_id_artist_download_url_quality.png)
-![QQ 官 Bot RichUI 音乐卡片与文件效果预览](doc/images/preview/qq_example_richui_card.png)
-![QQ 官 Bot 原生图文卡片与文件效果预览](doc/images/preview/qq_example_tuwen_card.png)
+![QQ 官 Bot 文件、封面、歌曲信息、下载链接与音质效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/qq_example_file_cover_name_id_artist_download_url_quality.png)
+![QQ 官 Bot RichUI 音乐卡片与文件效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/qq_example_richui_card_file.png)
+![QQ 官 Bot 原生图文卡片与文件效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/qq_example_tuwen_card.png)
 
 ---
 
@@ -47,33 +47,33 @@
 #### 1. ⚡ Canvas 渲染模式 (`v1.9.11+`)
 > 基于 `@napi-rs/canvas` / Skia 的轻量高速渲染方案。无需浏览器进程，内存占用极低，支持 `canvasScale` 高清缩放与自定义字体。
 
-![Canvas 渲染效果预览](doc/images/preview/songlist_example_canvas.png)
+![Canvas 渲染效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_canvas.png)
 
 #### 2. 🦀 resvg 渲染模式 (`v1.9.0+`)
 > 基于 Rust 编写的高性能 SVG 渲染器。内存安全，开箱即用，高 DPI 渲染细腻无锯齿。
 
-![SVG 渲染效果预览](doc/images/preview/songlist_example_svg.png)
+![SVG 渲染效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_svg.png)
 
 #### 3. 🎭 Puppeteer 渲染模式（传统模式）
 > 基于无头浏览器的传统渲染方式，支持高度定制化的样式与特效（如毛玻璃背景、圆角阴影等）。  
 > *⚠️ 注意：Puppeteer 模式内存占用相对较高，建议内存充裕的服务器选用，并推荐[配置 Swap 分区](https://vincentzyu233.github.io/VincentZyu233/notes/system-config/swap.html)防止 OOM。*
 
-![Puppeteer 原生风格效果预览](doc/images/preview/songlist_example_source.png)
-![Puppeteer 扁平风格效果预览](doc/images/preview/songlist_example_flat.png)
-![Puppeteer 毛玻璃风格效果预览](doc/images/preview/songlist_example_blurglass_lxgw_mahiro.png)
+![Puppeteer 原生风格效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_source.png)
+![Puppeteer 扁平风格效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_flat.png)
+![Puppeteer 毛玻璃风格效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_blurglass_lxgw_mahiro.png)
 
 #### 4. 💬 QQ 原生 Markdown 渲染模式 (`v1.9.6+`)
 > 专为 QQ 官方机器人适配的 Markdown 排版，支持表格风格与列表风格，交互友好。
 
-![QQ 原生 Markdown 表格风格预览](doc/images/preview/songlist_example_qq_markdown_table.png)
-![QQ 原生 Markdown 列表风格预览](doc/images/preview/songlist_example_qq_markdown_style.png)
+![QQ 原生 Markdown 表格风格预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_qq_markdown_table.png)
+![QQ 原生 Markdown 列表风格预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/songlist_example_qq_markdown_style.png)
 
 ---
 
 ### 🌐 跨平台与扩展协议端预览
 
-![OneBot 合并转发、音频与音乐卡片效果预览](doc/images/preview/onebot_example_forward_figure_audio_music_card.png)
-![Discord 歌单效果预览](doc/images/preview/discord_example_songlist.png)
+![OneBot 合并转发、音频与音乐卡片效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/onebot_example_forward_figure_audio_music_card.png)
+![Discord 歌单效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/discord_example_songlist.png)
 
 ---
 
@@ -96,7 +96,7 @@
 
 插件首次启动时，会自动从 Gitee Release（失败则自动回退至 GitHub Release）下载所需的字体和背景图片，并在下载完成后校验 SHA-256。**资源文件就绪后才会正式注册指令与中间件。**
 
-![Koishi WebUI 配置与通知效果预览](doc/images/preview/koishi_console_webui_plugin_setting_notifier_preview.png)
+![Koishi WebUI 配置与通知效果预览](https://cdn.jsdelivr.net/gh/VincentZyuApps/koishi-plugin-music-link-vincentzyu-fork@main/doc/images/preview/koishi_console_webui_plugin_setting_notifier_preview.png)
 
 #### 📥 离线 / 手动下载指南
 若服务器处于内网或下载受阻，可手动下载下列文件并放置于指定目录：
