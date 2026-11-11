@@ -2,6 +2,18 @@
 
 ## fork仓库 (koishi-plugin-music-link-vincentzyu-fork)
 
+- **1.13.1-beta.3+20261112** 🛠️
+  - 🐛 **修复合并转发/逐条发送尾部空字符串返回值**
+    - generateResponse() 在完成所有媒体发送后，由原先的 return '' 调整为规范返回 undefined
+    - command9 与 command6 的 action 统一增加 return response || undefined; 熔断，避免 Koishi 派发空消息触发下游出站引用幽灵气泡
+  - 🧹 **清理 QQ 文件发送模块脆弱嗅探 (lib/platform/qq/file.js)**
+    - 彻底移除过时的 isCrackAdapter 与 useMarkdownIfAt 配置字段探测
+    - 统一采用能力检测：优先直调 bot.internal.sendFileGuild 与 sendFilePrivate，官方与 Crack 适配器 100% 通用
+    - 缺失 internal 时安全平滑降级为 h.file / h.audio / h.video 元素发送
+    - 规范私聊目标 ID 格式，自动剔除 private: 前缀
+  - 🧪 **单元测试更新**
+    - 更新 command9-quality.test.js 与 qq-file.test.js 断言，44 项核心单元测试全部通过
+
 - **1.13.0+20261031** 🎴
   - ✨ **QQ 官 Bot 原生图文大卡片 (msg_type: 8)**
     - 新增 `lib/platform/qq/tuwen.js`，基于 QQ 开放平台最新的原生图文卡片协议（`msg_type: 8`，`card.type: 'tuwen'`）生成结构化卡片

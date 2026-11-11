@@ -29,11 +29,20 @@ test('returns the QQ official message id for downgrade notices', async () => {
     assert.deepEqual(result.messageIds, ['message-1']);
 });
 
-test('keeps crack adapter file sending as an h.file element', async () => {
+test('falls back to h.file element when bot.internal is unavailable', async () => {
     const utils = createQqFileUtils({ logInfo: () => {}, logDebug: () => {} });
-    const session = { bot: { config: { useMarkdownIfAt: true } } };
+    const session = { bot: { config: {} } };
     const result = await utils.sendQQFile(null, session, 'https://example.test/song.mp3', 'song.mp3');
 
     assert.equal(result.element.type, 'file');
+    assert.deepEqual(result.messageIds, []);
+});
+
+test('falls back to h.audio element for audio when bot.internal is unavailable', async () => {
+    const utils = createQqFileUtils({ logInfo: () => {}, logDebug: () => {} });
+    const session = { bot: { config: {} } };
+    const result = await utils.sendQQFile(null, session, 'https://example.test/song.mp3', 'song.mp3', 'audio/mpeg', 'audio');
+
+    assert.equal(result.element.type, 'audio');
     assert.deepEqual(result.messageIds, []);
 });

@@ -80,7 +80,6 @@ test('command9 resolves an unavailable initial quality before sending fields', a
         parseRenderMode: () => ({}),
         generateResponse: async (...args) => {
             generated = args;
-            return '';
         },
         renderSongList: async () => null,
         sendMusicCard: async () => {},
@@ -95,7 +94,7 @@ test('command9 resolves an unavailable initial quality before sending fields', a
     };
     const result = await commandContext.getAction()({ session, options: {} }, 'Test Song');
 
-    assert.equal(result, '');
+    assert.equal(result, undefined);
     assert.equal(generated[1].url, 'https://media.test/surround.flac');
     assert.deepEqual(generated[4].qualityFallback.candidates, [8, 7, 6, 5, 4, 3, 2, 1]);
     assert.equal(generated[4].telegramCaptionMode, 'separate-image');
@@ -164,7 +163,6 @@ test('command9 requests Kugou LRC and accepts KRC as a fallback', async () => {
         parseRenderMode: () => ({}),
         generateResponse: async (...args) => {
             generated = args;
-            return '';
         },
         renderSongList: async () => null,
         sendMusicCard: async () => {},
@@ -179,7 +177,7 @@ test('command9 requests Kugou LRC and accepts KRC as a fallback', async () => {
     };
     const result = await commandContext.getAction()({ session, options: {} }, 'Test Song');
 
-    assert.equal(result, '');
+    assert.equal(result, undefined);
     assert.equal(generated[1].lrc, '\n[0,1000]<0,1000,0>test');
     const lyricRequest = calls.find((requestUrl) => requestUrl.includes('/lyric?'));
     assert.ok(lyricRequest);
